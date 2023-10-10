@@ -22,11 +22,11 @@ const greeting = {
 const socialMediaLinks = {
   /* Your Social Media Link */
   github: "https://github.com/omniwot",
-  linkedin: "https://www.linkedin.com/in/harikrushn-kanani/",
+  linkedin: "https://www.linkedin.com/in/harshal-abhyankar-095b17198/",
   gmail: "abhyankarharshal22.gaming@gmail.com",
   //gitlab: "https://gitlab.com/omniwot",
-  // facebook: "https://www.facebook.com/harikrishan.kanani/",
-  //twitter: "https://twitter.com/Harikrushn9",
+  // facebook: "https://www.facebook.com/harshal/",
+  //twitter: "https://twitter.com/omni",
   instagram: "https://www.instagram.com/harshal_omni/",
 };
 
@@ -316,9 +316,10 @@ const certifications = {
       color_code: "#47A048",
     },
     {
-      title: "Hackathon",
-      subtitle: "Hack The Mountains",
+      title: "Data Structures and Algorithms",
+      subtitle: "DSA",
       logo_path: "hackathon1.svg",
+      //logo_path: "coursera.png",
       certificate_link:
         "https://drive.google.com/file/d/1Y-HT1flWDfeyfnfqVr3ubNgGIcnuUEYt/view?usp=sharing",
       alt_name: "hackathon",
@@ -366,7 +367,7 @@ const certifications = {
       subtitle: "Postman",
       logo_path: "postman.png",
       certificate_link:
-        "https://badgr.com/public/assertions/h2qevHs4SlyoHErJQ0mn2g",
+        "https://api.badgr.io/public/assertions/b_HANf0ZQfuYq0Elq4TX-Q?identity__email=abhyankarharshal22%40gmail.com",
       alt_name: "Postman",
       // color_code: "#f36c3d",
       color_code: "#fffbf3",
