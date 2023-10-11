@@ -15,18 +15,15 @@ const greeting = {
   nickname: "H",
   full_name: "Harshal Abhyankar",
   subTitle: "Backend Developer, Finance Enthusiast 🔥. Always learning.",
-  resumeLink: "asdasd",
+  resumeLink: "https://www.linkedin.com/in/harhal-abhyankar-095b17198/",
   mail: "mailto:abhyankarharshal22.gaming@gmail.com",
 };
 
 const socialMediaLinks = {
   /* Your Social Media Link */
   github: "https://github.com/omniwot",
-  linkedin: "https://www.linkedin.com/in/harshal-abhyankar-095b17198/",
+  linkedin: "https://www.linkedin.com/in/harhal-abhyankar-095b17198/",
   gmail: "abhyankarharshal22.gaming@gmail.com",
-  //gitlab: "https://gitlab.com/omniwot",
-  // facebook: "https://www.facebook.com/harshal/",
-  //twitter: "https://twitter.com/omni",
   instagram: "https://www.instagram.com/harshal_omni/",
 };
 
@@ -306,61 +303,67 @@ const degrees = {
 const certifications = {
   certifications: [
     {
-      title: "M0001: MongoDB Basics",
-      subtitle: "MongoDB University",
-      logo_path: "mongo.png",
+      title: "Python and Statistics for Financial Analysis",
+      subtitle: "Python/Finance",
+      logo_path: "Coursera1.png",
       certificate_link:
-        "https://drive.google.com/file/d/12se6bMep48WXA1PlizTBAgCnW0GXM6wq/view?usp=sharing",
-      alt_name: "MongoDB University",
-      // color_code: "#2AAFED",
-      color_code: "#47A048",
+        "https://www.coursera.org/account/accomplishments/certificate/WXD3KTNYVN9B",
+      alt_name: "certificate",
+      color_code: "#2AAFEE",
+    },
+    {
+      title: "Alphaverse",
+      subtitle: "Alphathon",
+      logo_path: "flutter.png",
+      certificate_link:
+        "https://drive.google.com/file/d/1JTd8pVlHbP0RVQYtfa4OZgJYGfdiCwM6/view?usp=sharing",
+      alt_name: "Alphathon",
+      color_code: "#2AAFED",
+    },
+    {
+      title: "Financial Markets",
+      subtitle: "Finance-Yale",
+      logo_path: "Coursera1.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/certificate/XEL627JG42EH",
+      alt_name: "certificate",
+      color_code: "#2AAFEE",
     },
     {
       title: "Data Structures and Algorithms",
       subtitle: "DSA",
-      logo_path: "hackathon1.svg",
-      //logo_path: "coursera.png",
+      logo_path: "Coursera1.png",
       certificate_link:
-        "https://drive.google.com/file/d/1Y-HT1flWDfeyfnfqVr3ubNgGIcnuUEYt/view?usp=sharing",
-      alt_name: "hackathon",
-      color_code: "#E2405F",
+        "https://www.coursera.org/account/accomplishments/certificate/AYG4ZF8DS3JS",
+      alt_name: "certificate",
+      color_code: "#2AAFEE",
     },
     {
-      title: "A300: Atlas Security",
-      subtitle: "MongoDB University",
-      logo_path: "mongo.png",
+      title: "Machine Learning",
+      subtitle: "ML",
+      logo_path: "Coursera1.png",
       certificate_link:
-        "https://drive.google.com/file/d/12u_tkvhgB-K2TIm-RDdJOwYbQ9ccqiqA/view?usp=sharing",
-      alt_name: "MongoDB University",
-      // color_code: "#F6B808",
-      color_code: "#47A048",
+        "https://www.coursera.org/account/accomplishments/certificate/U6CGPJRUELPJ",
+      alt_name: "certificate",
+      color_code: "#2AAFEE",
     },
     {
-      title: "Cyber Security & Cyber Forensics",
-      subtitle: "Workshop at IIT Bombay",
-      logo_path: "iit.png",
+      title: "Server-side development with NodeJS,Express and MongoDB",
+      subtitle: "Backend",
+      logo_path: "Coursera1.png",
       certificate_link:
-        "https://drive.google.com/file/d/12uAdjQC5LfrB1ODdxqIY181ugyyQhl-I/view?usp=sharing",
-      alt_name: "Workshop",
-      color_code: "#2AAFED",
+        "https://www.coursera.org/account/accomplishments/certificate/5ZFE79DQJAGZ",
+      alt_name: "certificate",
+      color_code: "#2AAFEE",
     },
     {
-      title: "MLH Local Hack Day: Build",
-      subtitle: "Major League Hacking",
-      logo_path: "mlh-logo.svg",
-      certificate_link:
-        "https://drive.google.com/file/d/1ws7g2Oepu76vDFir6SvR_emFAMSkB2ZQ/view?usp=sharing",
-      alt_name: "Google",
-      color_code: "#fe0037",
-    },
-    {
-      title: "Hack20",
-      subtitle: "Flutter International Hackathon",
-      logo_path: "flutter.png",
+      title: "Javascript DSA",
+      subtitle: "DSA",
+      logo_path: "fcc.png",
       certificate_link:
         "https://drive.google.com/file/d/1JTd8pVlHbP0RVQYtfa4OZgJYGfdiCwM6/view?usp=sharing",
-      alt_name: "Flutter International Hackathon",
-      color_code: "#2AAFED",
+      alt_name: "Freecodecamp",
+      color_code: "#FFFFFF",
     },
     {
       title: "Postman Student Expert",
@@ -372,15 +375,6 @@ const certifications = {
       // color_code: "#f36c3d",
       color_code: "#fffbf3",
     },
-    // color_code: "#8C151599",
-    // color_code: "#7A7A7A",
-    // color_code: "#0C9D5899",
-    // color_code: "#C5E2EE",
-    // color_code: "#ffc475",
-    // color_code: "#g",
-    // color_code: "#ffbfae",
-    // color_code: "#fffbf3",
-    // color_code: "#b190b0",
   ],
 };
 
@@ -389,19 +383,19 @@ const experience = {
   title: "Experience",
   subtitle: "Work, Internship and Volunteership",
   description:
-    "I've completed one internship. I've mostly done projects on my own and I am actively looking for internships. I love organizing workshops to share my knowledge with others.",
+    "I've completed 4 internships during my UG studies at BITS Pilani. I've mostly done projects on my own and I am actively looking for internships. I love organizing workshops to share my knowledge with others.",
   header_image_path: "experience.svg",
   sections: [
     {
       title: "Work Experience",
       experiences: [
         {
-          title: "Node.js Backend Developer",
-          company: "Valora Infotech",
-          company_url: "http://valorainfotech.com/",
+          title: "SWE Intern",
+          company: "Cisco Systems (India)",
+          company_url: "https://www.cisco.com/",
           logo_path: "valora.jpg",
-          duration: "Oct 2020 - Dec 2022",
-          location: "Surat, Gujarat",
+          duration: "August 2022 - Dec 2022",
+          location: "Bangalore, India",
           description: `Train, oversee, and mentor young software development employees. I created and managed the admin panel backend and a gambling application as a Node.js backend developer. I obtained knowledge in Web Socket, Payment Gateway Integration, and gaming legislation, while growing my industry experience and investigating new technologies.
           Focus on change request functions in close collaboration with the project manager and team leads.
           Developed new and maintained existing applications.
@@ -483,17 +477,10 @@ const projectsHeader = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "harikrushn.jpg",
+    profile_image_path: "enigma.png",
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },
-  // blogSection: {
-  //   title: "Blogs",
-  //   subtitle:
-  //     "I don't blog frequently but when I do something awesome, I do try to document it so it can be helpful to others. I write on Twitter.",
-  //   link: "https://twitter.com/Harikrushn9",
-  //   avatar_image_path: "blogs_image.svg",
-  // },
 };
 
 const projects = {

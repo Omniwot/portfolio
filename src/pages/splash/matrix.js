@@ -49,6 +49,11 @@ const RainStream = (props) => {
     setTimeout(() => {
       setIntervalDelay(getRandInRange(MIN_INTERVAL_DELAY, MAX_INTERVAL_DELAY));
     }, getRandInRange(MIN_DELAY_BETWEEN_STREAMS, MAX_DELAY_BETWEEN_STREAMS));
+    return () => {
+      setStream({});
+      setTopPadding({});
+      setIntervalDelay({});
+    };
   }, []);
 
   useInterval(() => {
@@ -122,6 +127,9 @@ const MatrixRain = (props) => {
       width: boundingClientRect.width,
       height: boundingClientRect.height,
     });
+    return () => {
+      setContainerSize({}); // This worked for me
+    };
   }, []);
 
   const streamCount = containerSize ? Math.floor(containerSize.width / 26) : 0;
