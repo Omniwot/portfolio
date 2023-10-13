@@ -14,7 +14,7 @@ const greeting = {
   logo_name: "O(n)iwot",
   nickname: "H",
   full_name: "Harshal Abhyankar",
-  subTitle: "Backend Developer, Finance Enthusiast 🔥. Always learning.",
+  subTitle: "Full Stack Developer, Finance Enthusiast. Always learning.",
   resumeLink: "https://www.linkedin.com/in/harhal-abhyankar-095b17198/",
   mail: "mailto:abhyankarharshal22.gaming@gmail.com",
 };
@@ -22,7 +22,7 @@ const greeting = {
 const socialMediaLinks = {
   /* Your Social Media Link */
   github: "https://github.com/omniwot",
-  linkedin: "https://www.linkedin.com/in/harhal-abhyankar-095b17198/",
+  linkedin: "https://www.linkedin.com/in/harshal-abhyankar-095b17198/",
   gmail: "abhyankarharshal22.gaming@gmail.com",
   instagram: "https://www.instagram.com/harshal_omni/",
 };
@@ -33,11 +33,11 @@ const skills = {
       title: "Backend Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications",
-        "⚡ Building responsive website front end using ReactJS",
-        "⚡ Developing mobile applications using Flutter in Android Studio",
-        "⚡ Creating application backend in Node, Express & Postgresql",
-        "⚡ Integration of third party services such as Firebase/ AWS / MongoDB Cloud",
+        "🔶 Develop highly interactive Front end / User Interfaces for your web and mobile applications",
+        "🔶 Building responsive website front end using ReactJS",
+        "🔶 Developing mobile applications using Flutter in Android Studio",
+        "🔶 Creating application backend in Node, Express & Postgresql",
+        "🔶 Integration of third party services such as Firebase/ AWS / MongoDB Cloud",
       ],
       softwareSkills: [
         {
@@ -62,13 +62,6 @@ const skills = {
             color: "#F7DF1E",
           },
         },
-        // {
-        //   skillName: "PHP",
-        //   fontAwesomeClassname: "simple-icons:php",
-        //   style: {
-        //     color: "#7377AD",
-        //   },
-        // },
         {
           skillName: "ReactJS",
           fontAwesomeClassname: "simple-icons:react",
@@ -97,13 +90,6 @@ const skills = {
             color: "#439743",
           },
         },
-        // {
-        //   skillName: "GraphQL",
-        //   fontAwesomeClassname: "simple-icons:graphql",
-        //   style: {
-        //     color: "#DE33A6",
-        //   },
-        // },
         {
           skillName: "Android",
           fontAwesomeClassname: "simple-icons:android",
@@ -118,27 +104,6 @@ const skills = {
         //     color: "#f89820",
         //   },
         // },
-        // {
-        //   skillName: "Flutter",
-        //   fontAwesomeClassname: "simple-icons:flutter",
-        //   style: {
-        //     color: "#02569B",
-        //   },
-        // },
-        // {
-        //   skillName: "Dart",
-        //   fontAwesomeClassname: "simple-icons:dart",
-        //   style: {
-        //     color: "#29B0EE",
-        //   },
-        // },
-        // {
-        //   skillName: "Visual Basic",
-        //   fontAwesomeClassname: "simple-icons:dot-net",
-        //   style: {
-        //     color: "#029FCE",
-        //   },
-        // },
         {
           skillName: "MySQL",
           fontAwesomeClassname: "simple-icons:mysql",
@@ -151,13 +116,6 @@ const skills = {
         //   fontAwesomeClassname: "simple-icons:jquery",
         //   style: {
         //     color: "#0865A6",
-        //   },
-        // },
-        // {
-        //   skillName: "Wordpress",
-        //   fontAwesomeClassname: "simple-icons:wordpress",
-        //   style: {
-        //     color: "#207297",
         //   },
         // },
         {
@@ -201,9 +159,9 @@ const skills = {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on multiple cloud platforms",
-        "⚡ Experience hosting and managing websites",
-        "⚡ Experience with Continuous Integration",
+        "🔶 Experience working on multiple cloud platforms",
+        "🔶 Experience hosting and managing websites",
+        "🔶 Experience with Continuous Integration",
       ],
       softwareSkills: [
         {
@@ -276,10 +234,10 @@ const degrees = {
       alt_name: "UIUC",
       duration: "Fall 2023 - Present",
       descriptions: [
-        "⚡ I'm currently pursuing my masters in Information Management.",
-        // "⚡ I have studied core subjects like Data Structures, DBMS, Networking, Security, etc.",
-        // "⚡ I have also completed various online courses for Backend , Web , Mobile App Development, etc.",
-        // "⚡ I have implemented several projects based on what I've leart under my Computer Engineering course. ",
+        "🔶 I'm currently pursuing my masters in Information Management.",
+        "🔶 My coursework in Fall 2023 includes Information Consulting by Prof. Yoo-Seong Song, Data Warehousing and Business Intelligence by Michael Wonderlich and Data Statistical Methods and Modelling by Stephanie Besser.   ",
+        // "🔶 I have also completed various online courses for Backend , Web , Mobile App Development, etc.",
+        // "🔶 I have implemented several projects based on what I've leart under my Computer Engineering course. ",
       ],
       website_link: "https://illinois.edu/",
     },
@@ -290,10 +248,9 @@ const degrees = {
       alt_name: "BITS Pilani",
       duration: "2019 - 2023",
       descriptions: [
-        "⚡ I have studied core subjects like Data Structures, DBMS, Networking, Security, etc.",
-        "⚡ I have also completed various online courses for Backend , Web , Mobile App Development, etc.",
-        "⚡ I have implemented several projects based on what I've leart under my Computer Engineering course. ",
-        "⚡ I have secured 8.98 CGPA.",
+        "🔶 I have completed CS electives including Digital Image Processing, Operating Systems, Multimedia computing, Internet of Things and Human Resource Development.",
+        "🔶 I have also completed various online courses for Backend , Web , Mobile App Development and Full Stack Development and implemented them in personal projects.",
+        "🔶 I have worked with 2 startups and 2 MNCs throughout my undergraduate studies for practical experience.",
       ],
       website_link: "https://www.bits-pilani.ac.in/",
     },
@@ -315,8 +272,7 @@ const certifications = {
       title: "Alphaverse",
       subtitle: "Alphathon",
       logo_path: "flutter.png",
-      certificate_link:
-        "https://drive.google.com/file/d/1JTd8pVlHbP0RVQYtfa4OZgJYGfdiCwM6/view?usp=sharing",
+      certificate_link: "",
       alt_name: "Alphathon",
       color_code: "#2AAFED",
     },
@@ -361,7 +317,16 @@ const certifications = {
       subtitle: "DSA",
       logo_path: "fcc.png",
       certificate_link:
-        "https://drive.google.com/file/d/1JTd8pVlHbP0RVQYtfa4OZgJYGfdiCwM6/view?usp=sharing",
+        "https://www.freecodecamp.org/certification/fccef56bd66-03e4-46de-8ee3-4275ac796cb5/javascript-algorithms-and-data-structures",
+      alt_name: "Freecodecamp",
+      color_code: "#FFFFFF",
+    },
+    {
+      title: "Responsive Web Design",
+      subtitle: "Web Development",
+      logo_path: "fcc.png",
+      certificate_link:
+        "https://www.freecodecamp.org/certification/omniwot/responsive-web-design",
       alt_name: "Freecodecamp",
       color_code: "#FFFFFF",
     },
@@ -372,7 +337,6 @@ const certifications = {
       certificate_link:
         "https://api.badgr.io/public/assertions/b_HANf0ZQfuYq0Elq4TX-Q?identity__email=abhyankarharshal22%40gmail.com",
       alt_name: "Postman",
-      // color_code: "#f36c3d",
       color_code: "#fffbf3",
     },
   ],
@@ -393,44 +357,61 @@ const experience = {
           title: "SWE Intern",
           company: "Cisco Systems (India)",
           company_url: "https://www.cisco.com/",
-          logo_path: "valora.jpg",
+          logo_path: "cisco.png",
           duration: "August 2022 - Dec 2022",
           location: "Bangalore, India",
-          description: `Train, oversee, and mentor young software development employees. I created and managed the admin panel backend and a gambling application as a Node.js backend developer. I obtained knowledge in Web Socket, Payment Gateway Integration, and gaming legislation, while growing my industry experience and investigating new technologies.
-          Focus on change request functions in close collaboration with the project manager and team leads.
-          Developed new and maintained existing applications.
-          Increased productivity and problem-solving technics by 20%.
-          We primarily used PERN and MERN Stack. 80% of my work was doing backend development and the remaining 20% was DevOps-related tasks.
+          description: `• Created micro-frontend implementations of existing frontends of an application. (ReactJS, Babel, Direflow)
+          • Assisted in UI and Frontend development of a new project. (ReactJS, Material UI, HTML, CSS)
+          • Worked on Automation testing of web workflows and load testing. (Python, Selenium) and manual testing.
           `,
-          // "I worked on the Dashboard project which helps users track their activities while using Walo Application. I also worked on Ocean Inventory Application and it's Admin panel Backend as well as on Ocean Inventory Admin Front-end using React and also worked on Walo Admin Backend.",
           color: "#0071C5",
         },
-        // {
-        //   title: "Node.js Backend Developer (Intern)",
-        //   company: "Valora Infotech",
-        //   company_url: "http://valorainfotech.com/",
-        //   logo_path: "valora.jpg",
-        //   duration: "Oct 2020 - Mar 2021",
-        //   location: "Surat, Gujarat",
-        //   description: `Focus on change request functions in close collaboration with the project manager and team leads.
-        //   Developed new and maintained existing applications.
-        //   Increased productivity and problem-solving technics by 20%.
-        //   We primarily used PERN and MERN Stack. 80% of my work was doing backend development and the remaining 20% was DevOps-related tasks.
-        //   `,
-        //   // "I worked on the Dashboard project which helps users track their activities while using Walo Application. I also worked on Ocean Inventory Application and it's Admin panel Backend as well as on Ocean Inventory Admin Front-end using React and also worked on Walo Admin Backend.",
-        //   color: "#0071C5",
-        // },
         {
-          title: "Full Stack Developer (Freelancer)",
-          company: "NightOwls",
-          company_url: "http://nightowls.company/",
-          logo_path: "nightowls.jpg",
-          duration: "Sep 2020 - Oct 2020",
+          title: "Full Stack Developer",
+          company: "Zeeve Inc.",
+          company_url: "https://www.zeeve.io/",
+          logo_path: "zeeve.png",
+          duration: "April 2022 - August 2022",
           location: "Work From Home",
-          description: `Maintain close contact with the client and team when handling change requests.
-          LAMP Stack was mostly utilised. 40% of my work was doing backend development, 30% of my work was designing database schemas, and 30% of my work was on maintain hosting and user traffics on the website.
-          `,
-          // "Created Front end of Yearn Financial Mutual Funds website. also degined simple web application for better user experience, designed DB Schemas as well.",
+          description: `• I was rehired by Zeeve after my externship ended to continue working on their admin portal. 
+          • Led a team of three to develop and design client admin portal (NodeJS, Typescript, ReactJS, PostgreSQL) 
+          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
+          color: "#ee3c26",
+        },
+        {
+          title: "Github Extern at Zeeve Inc.",
+          company: "Zeeve Inc.",
+          company_url: "https://www.zeeve.io/",
+          logo_path: "zeeve.png",
+          duration: "January 2022 - April 2022",
+          location: "Work From Home",
+          description: `• One of the students selected for the GitHub Externship '22 Winter Cohort out of 14k+ applications. 
+          • Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
+          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
+          color: "#ee3c26",
+        },
+        {
+          title: "Full Stack Developer",
+          company: "Phigent LLC",
+          company_url: "https://www.cybervardan.com/",
+          logo_path: "cyber.png",
+          duration: "January 2022 - April 2022",
+          location: "Work From Home",
+          description: `• One of the students selected for the GitHub Externship '22 Winter Cohort out of 14k+ applications. 
+          • Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
+          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
+          color: "#ee3c26",
+        },
+        {
+          title: "Research Intern (IIOT Division)",
+          company: "L&T Infotech (now LTI Mindtree)",
+          company_url: "https://www.ltimindtree.com/",
+          logo_path: "cyber.png",
+          duration: "January 2022 - April 2022",
+          location: "Work From Home",
+          description: `• One of the students selected for the GitHub Externship '22 Winter Cohort out of 14k+ applications. 
+          • Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
+          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
           color: "#ee3c26",
         },
       ],
@@ -441,23 +422,23 @@ const experience = {
         {
           title: "Volunteer Teacher and Member",
           company: "NSS, BITS Pilani",
-          company_url: "",
-          logo_path: "bauddhikgeeks.png",
-          duration: "Sep 2021 - Present",
-          location: "Work From Home",
-          description:
-            "Help Tech-Geeks so they get exposure to the technical world and enlighten their skills. Hence, the programming club highlight all the skills of the individual members and help them develop and groom their skills in a meaningful way. Help community members to learn and grow.",
+          company_url: "https://nssbitspilani.org/departments/School",
+          logo_path: "nss.png",
+          duration: "August 2019 - September 2021",
+          location: "BITS, Pilani",
+          description: `• Taught local students Math, Chemistry and Physics for 1.5 hours per day 3 days a week. 
+             • Assisted in all NSS events including UDAAN 2k19, Junoon 2k19 and Blood donation camps`,
           color: "#FBBD18",
         },
         {
           title: "Music Coordinator",
           company: "Maharashtra Mandal",
-          company_url: "https://crosswoc.ieeedtu.in/",
-          logo_path: "cwoc.png",
-          duration: "Feb 2021 - Present",
-          location: "Work From Home",
-          description:
-            "Mentorship responsibilities were to help students plan the project, review issues and pull requests, ensure smooth progress and help them out when they are stuck.",
+          company_url: "",
+          logo_path: "mandal.png",
+          duration: "August 2020 - September 2021",
+          location: "BITS, Pilani",
+          description: `• Organized and planned musical events, recitals, and performances.
+            • Coordinated logistics for events, including music selections, equipment setup, and scheduling`,
           color: "#4285F4",
         },
       ],
@@ -469,7 +450,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects make use of a vast variety of latest technology tools. My best experience is to create NodeJS Backend Projects, Python Scripts, and React Project. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
+    "My projects are created a vast variety of latest tech stacks. I have most experience with Javascript, Python and C based tech stacks. Below are some of my projects. Note that some of my mentioned research projects are not on GitHub.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -487,10 +468,10 @@ const projects = {
   data: [
     {
       id: "0",
-      name: "Keep Calm and Carry On",
-      url: "https://github.com/omniwot/Keep-Calm-and-Carry-On.github.io",
-      description:
-        "This platform enables users to practice Augmented Reality meditation, play stress burster games, track task completion and engage in motivational exercises to cope with stress and anxiety at work.  ",
+      name:
+        "IoT Based Precision Agriculture for weather alerts and Farm advisory",
+      url: "",
+      description: `Details of this project cannot be made public as its patent is being filed. `,
       languages: [
         {
           name: "HTML5",
@@ -512,7 +493,7 @@ const projects = {
       links: [
         {
           name: "Github",
-          url: "https://github.com/harikanani/Keep-Calm-and-Carry-On.github.io",
+          url: "",
           iconifyClass: "ri:github-fill",
         },
         // {
@@ -530,7 +511,7 @@ const projects = {
     },
     {
       id: "1",
-      name: "YOG4LIFE SOCIAL APP",
+      name: "Options backtesting system using Numpy and Pandas",
       url: "https://github.com/kevalvavaliya/Yog4Life",
       description:
         "An app for helping people their healthy life. Yog4Life Has a feed feature which is help to get information from the folks, Yog4Life has an anonymous chat room to get connected with the world.",
@@ -559,8 +540,8 @@ const projects = {
     },
     {
       id: "2",
-      name: "Adoptisity",
-      url: "https://github.com/kevalvavaliya/Adoptisity",
+      name: "Options backtesting system using Numpy and Pandas",
+      url: "",
       description:
         "Our mission is to spread awareness about the benefits of adoption and to support LGBT families so that everyone has the chance to have a loving home environment.",
       languages: [
@@ -587,22 +568,12 @@ const projects = {
           url: "https://github.com/harikanani/Adoptisity",
           iconifyClass: "ri:github-fill",
         },
-        {
-          name: "Devpost",
-          url: "https://devpost.com/software/adoptisity",
-          iconifyClass: "fluent:window-dev-edit-20-filled",
-        },
-        {
-          name: "Live Demo",
-          url: "https://rajmahadevwala1.wixsite.com/adoptisity",
-          iconifyClass: "mdi:web",
-        },
       ],
     },
     {
       id: "3",
-      name: "FinSplit",
-      url: "https://github.com/rajmahadev8/Fin-Split",
+      name: "Hacker News",
+      url: "https://github.com/Omniwot/hackerNewsReact",
       description:
         "Split your bills with your friends without any hassle. Manage Group Expenses, Track your expenses, and much more.",
       languages: [
@@ -618,13 +589,8 @@ const projects = {
       links: [
         {
           name: "Github",
-          url: "https://github.com/rajmahadev8/Fin-Split",
+          url: "https://github.com/Omniwot/hackerNewsReact",
           iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Devpost",
-          url: "https://devpost.com/software/finsplit",
-          iconifyClass: "fluent:window-dev-edit-20-filled",
         },
       ],
     },
