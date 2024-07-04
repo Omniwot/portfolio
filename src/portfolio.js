@@ -9,12 +9,12 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello 👋.",
+  title: "Hello 👋!",
   title2: "Omniwot",
   logo_name: "O(n)iwot",
   nickname: "H",
   full_name: "Harshal Abhyankar",
-  subTitle: "Full Stack Developer, Finance Enthusiast. Always learning.",
+  subTitle: " ML Engineer and Full Stack Developer . Always learning.",
   resumeLink: "https://www.linkedin.com/in/harhal-abhyankar-095b17198/",
   mail: "mailto:abhyankarharshal22.gaming@gmail.com",
 };
@@ -24,11 +24,131 @@ const socialMediaLinks = {
   github: "https://github.com/omniwot",
   linkedin: "https://www.linkedin.com/in/harshal-abhyankar-095b17198/",
   gmail: "abhyankarharshal22.gaming@gmail.com",
-  instagram: "https://www.instagram.com/harshal_omni/",
+  //instagram: "https://www.instagram.com/harshal_omni/",
 };
 
 const skills = {
   data: [
+    {
+      title: "Machine Learning and Data Science",
+      fileName: "DataScienceImg",
+      skills: [
+        "🔶 Developing and deploying machine learning models using Python",
+        "🔶 Building and maintaining data pipelines with Apache Spark and Azure Data Factory",
+        "🔶 Performing data analysis and visualization with tools like PySpark and PowerBI",
+        "🔶 Implementing Natural Language Processing (NLP) techniques for text classification",
+        "🔶 Working with vector databases and advanced data retrieval methods for RAG",
+        "🔶 Integrating third-party services such as Firebase, AWS, and MongoDB Cloud",
+      ],
+      softwareSkills: [
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "simple-icons:python",
+          style: {
+            color: "#3776AB",
+          },
+        },
+        {
+          skillName: "SQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: {
+            color: "#336791",
+          },
+        },
+        {
+          skillName: "R",
+          fontAwesomeClassname: "simple-icons:r",
+          style: {
+            color: "#276DC3",
+          },
+        },
+        {
+          skillName: "Apache Spark",
+          fontAwesomeClassname: "simple-icons:apachespark",
+          style: {
+            color: "#E25A1C",
+          },
+        },
+        {
+          skillName: "Azure",
+          fontAwesomeClassname: "simple-icons:microsoftazure",
+          style: {
+            color: "#0089D6",
+          },
+        },
+        {
+          skillName: "Langchain",
+          fontAwesomeClassname: "simple-icons:langchain",
+          style: {
+            color: "#61DAFB",
+          },
+        },
+        {
+          skillName: "OpenAI API",
+          fontAwesomeClassname: "simple-icons:openai",
+          style: {
+            color: "#412991",
+          },
+        },
+        {
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: {
+            color: "#336791",
+          },
+        },
+        {
+          skillName: "MongoDB",
+          fontAwesomeClassname: "simple-icons:mongodb",
+          style: {
+            color: "#439743",
+          },
+        },
+        {
+          skillName: "Git",
+          fontAwesomeClassname: "simple-icons:git",
+          style: {
+            color: "#E94E32",
+          },
+        },
+        {
+          skillName: "ReactJS",
+          fontAwesomeClassname: "simple-icons:react",
+          style: {
+            color: "#61DAFB",
+          },
+        },
+        {
+          skillName: "NodeJS",
+          fontAwesomeClassname: "simple-icons:node-dot-js",
+          style: {
+            color: "#339933",
+          },
+        },
+        {
+          skillName: "JavaScript",
+          fontAwesomeClassname: "simple-icons:javascript",
+          style: {
+            backgroundColor: "#FFFFFF",
+            color: "#F7DF1E",
+          },
+        },
+        {
+          skillName: "C",
+          fontAwesomeClassname: "simple-icons:c",
+          style: {
+            color: "#A8B9CC",
+          },
+        },
+        {
+          skillName: "C++",
+          fontAwesomeClassname: "simple-icons:cplusplus",
+          style: {
+            color: "#00599C",
+          },
+        },
+      ],
+    },
     {
       title: "Backend Development",
       fileName: "FullStackImg",
@@ -155,6 +275,7 @@ const skills = {
         },
       ],
     },
+
     {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
@@ -474,14 +595,6 @@ const projects = {
       description: `Details of this project cannot be made public as its patent is being filed. `,
       languages: [
         {
-          name: "HTML5",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "logos-css-3",
-        },
-        {
           name: "NodeJs",
           iconifyClass: "logos-nodejs",
         },
@@ -541,10 +654,33 @@ const projects = {
     {
       id: "2",
       name: "Options backtesting system using Numpy and Pandas",
-      url: "",
-      description:
-        "Our mission is to spread awareness about the benefits of adoption and to support LGBT families so that everyone has the chance to have a loving home environment.",
+      url:
+        "Options backtesting system using Numpy and Pandas to test specific option chains for Iron butterfly strategy with a fifth dynamic leg for hedging.",
+      description: "",
       languages: [
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+      ],
+      links: [
+        {
+          name: "Github",
+          url: "",
+          iconifyClass: "ri:github-fill",
+        },
+      ],
+    },
+    {
+      id: "3",
+      name: "Project Medcare",
+      url: "https://github.com/Omniwot/hackerNewsReact",
+      description: "Hacker News Clone using React.",
+      languages: [
+        {
+          name: "ReactJS",
+          iconifyClass: "logos-react",
+        },
         {
           name: "HTML5",
           iconifyClass: "logos-html-5",
@@ -552,34 +688,6 @@ const projects = {
         {
           name: "CSS3",
           iconifyClass: "logos-css-3",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "Wix",
-          iconifyClass: "bxl:wix",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/harikanani/Adoptisity",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "3",
-      name: "Hacker News",
-      url: "https://github.com/Omniwot/hackerNewsReact",
-      description:
-        "Split your bills with your friends without any hassle. Manage Group Expenses, Track your expenses, and much more.",
-      languages: [
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
         },
         {
           name: "NodeJs",
@@ -596,7 +704,7 @@ const projects = {
     },
     {
       id: "4",
-      name: "Emosic",
+      name: "IoT-Based Baby Monitoring System",
       url: "https://github.com/kevalvavaliya/Emosic",
       description:
         "An app that plays music according to your mood. Created a playlist management UI and used SpotifyAPI to control player client based on mood detection using ml model.",
@@ -730,29 +838,32 @@ const projects = {
       ],
     },
     {
-      id: "8",
-      name: "Swag Store",
-      url: "https://github.com/harikanani/e-commerce-frontend",
-      description:
-        "An E-commerce website built using MERN[Mongo, Express, React, Node] stack and we have also added stripe payment gateway integration [in test mode].",
+      id: "3",
+      name: "Hacker News",
+      url: "https://github.com/Omniwot/hackerNewsReact",
+      description: "Hacker News Clone using React.",
       languages: [
         {
           name: "ReactJS",
           iconifyClass: "logos-react",
         },
         {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
+          name: "HTML5",
+          iconifyClass: "logos-html-5",
         },
         {
-          name: "MedusaJS",
-          iconifyClass: "logos-medusa-icon",
+          name: "CSS3",
+          iconifyClass: "logos-css-3",
+        },
+        {
+          name: "NodeJs",
+          iconifyClass: "logos-nodejs",
         },
       ],
       links: [
         {
           name: "Github",
-          url: "https://github.com/harikanani/e-commerce-frontend",
+          url: "https://github.com/Omniwot/hackerNewsReact",
           iconifyClass: "ri:github-fill",
         },
       ],
@@ -849,7 +960,7 @@ const projects = {
     },
     {
       id: "13",
-      name: "GitHub Theme Portfolio",
+      name: "GitHub Portfolio",
       url: "https://github.com/harikanani/harikanani.github.io",
       description:
         "A Personal Portfolio Website that showcases my work and experience. which is hosted on Github Pages.",
@@ -884,239 +995,6 @@ const projects = {
         },
       ],
     },
-    // {
-    //   id: "6",
-    //   name: "Automate Attendace",
-    //   url: "https://github.com/harikanani/Node_Python",
-    //   description: "Automation of Online Attendance using node js and python",
-    //   languages: [
-    //     {
-    //       name: "JavaScript",
-    //       iconifyClass: "logos-javascript",
-    //     },
-    //     {
-    //       name: "Python",
-    //       iconifyClass: "logos-python",
-    //     },
-    //   ],
-    //   links: [
-    //     {
-    //       name: "Github",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //     {
-    //       name: "Devfolio",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: "7",
-    //   name: "Automate Discord Bot",
-    //   url: "https://github.com/harikanani/AutomateDiscordBot",
-    //   description:
-    //     "A Discord Bot to send Automatic messages to serer channel in regular time difference.",
-    //   languages: [
-    //     {
-    //       name: "Python",
-    //       iconifyClass: "logos-python",
-    //     },
-    //     {
-    //       name: "Python Selenium",
-    //       iconifyClass: "logos-selenium",
-    //     },
-    //     {
-    //       name: "Chromium Browser",
-    //       iconifyClass: "openmoji-chromium",
-    //     },
-    //   ],
-    //   links: [
-    //     {
-    //       name: "Github",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //     {
-    //       name: "Devfolio",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: "8",
-    //   name: "Flask Blog",
-    //   url: "https://github.com/harikanani/flask_blog",
-    //   description: "A Simple Blog Web Application made using Flask Framework",
-    //   languages: [
-    //     {
-    //       name: "Python",
-    //       iconifyClass: "logos-python",
-    //     },
-    //     {
-    //       name: "Flask",
-    //       iconifyClass: "cib-flask",
-    //     },
-    //     {
-    //       name: "HTML5",
-    //       iconifyClass: "vscode-icons:file-type-html",
-    //     },
-    //     {
-    //       name: "CSS3",
-    //       iconifyClass: "vscode-icons:file-type-css",
-    //     },
-    //   ],
-    //   links: [
-    //     {
-    //       name: "Github",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //     {
-    //       name: "Devfolio",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: "9",
-    //   name: "Netflix top series",
-    //   url: "https://github.com/harikanani/netflix-top-series",
-    //   description: "List of Top Netflix Series which is deployed to vercel.",
-    //   languages: [
-    //     {
-    //       name: "JavaScript",
-    //       iconifyClass: "logos-javascript",
-    //     },
-    //     {
-    //       name: "ReactJS",
-    //       iconifyClass: "logos-react",
-    //     },
-    //     {
-    //       name: "HTML5",
-    //       iconifyClass: "logos-html-5",
-    //     },
-    //     {
-    //       name: "CSS3",
-    //       iconifyClass: "logos-css-3",
-    //     },
-    //   ],
-    //   links: [
-    //     {
-    //       name: "Github",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //     {
-    //       name: "Devfolio",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //   ],
-    // },
-    {
-      id: "10",
-      name: "COVID-19 Tracker",
-      url: "https://github.com/harikanani/Covid19TrackerReact",
-      description:
-        "Simple Covid-19 Tracker made using React and deployed to Vercel.",
-      languages: [
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "ReactJS",
-          iconifyClass: "logos-react",
-        },
-        {
-          name: "HTML5",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "logos-css-3",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/harikanani/Covid19TrackerReact",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    // {
-    //   id: "11",
-    //   name: "Food Order Static Website",
-    //   url: "https://github.com/harikanani/food-order-website",
-    //   description:
-    //     "A simple static website related to food restaurants service. this is reasponsive as well.",
-    //   languages: [
-    //     {
-    //       name: "HTML5",
-    //       iconifyClass: "logos-html-5",
-    //     },
-    //     {
-    //       name: "CSS3",
-    //       iconifyClass: "logos-css-3",
-    //     },
-    //     {
-    //       name: "JavaScript",
-    //       iconifyClass: "logos-javascript",
-    //     },
-    //     {
-    //       name: "PHP",
-    //       iconifyClass: "logos-php",
-    //     },
-    //   ],
-    //   links: [
-    //     {
-    //       name: "Github",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //     {
-    //       name: "Devfolio",
-    //       url: "",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: "12",
-    //   name: "NFT Launchpad",
-    //   url: "https://deliquescent-cents.000webhostapp.com/",
-    //   description: "NFT Launchpad crypto site portfolio",
-    //   languages: [
-    //     {
-    //       name: "HTML5",
-    //       iconifyClass: "logos-html-5",
-    //     },
-    //     {
-    //       name: "CSS3",
-    //       iconifyClass: "logos-css-3",
-    //     },
-    //     {
-    //       name: "JavaScript",
-    //       iconifyClass: "logos-javascript",
-    //     },
-    //     {
-    //       name: "ReactJS",
-    //       iconifyClass: "logos-react",
-    //     },
-    //   ],
-    //   links: [
-    //     {
-    //       name: "Github",
-    //       url: "https://github.com/harikanani/nft-launchpad",
-    //       iconifyClass: "ri:github-fill",
-    //     },
-    //   ],
-    // },
   ],
 };
 
