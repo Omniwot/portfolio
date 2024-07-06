@@ -50,7 +50,7 @@ export default function socialMedia() {
         <i className="fab fa-twitter"></i>
         <span></span>
       </a> */}
-      <a
+      {/* <a
         href={socialMediaLinks.instagram}
         className="icon-button instagram"
         target="_blank"
@@ -58,7 +58,7 @@ export default function socialMedia() {
       >
         <i className="fab fa-instagram"></i>
         <span></span>
-      </a>
+      </a> */}
     </div>
   );
 }

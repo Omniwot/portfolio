@@ -42,6 +42,7 @@
 }
 
 .greeting-text-p {
+  white-space: pre;
   font-size: 30px;
   line-height: 40px;
   margin-right: 40px;

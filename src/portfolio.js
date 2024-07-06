@@ -9,13 +9,15 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello 👋!",
+  title: "Hello👋!",
   title2: "Omniwot",
   logo_name: "O(n)iwot",
   nickname: "H",
-  full_name: "Harshal Abhyankar",
-  subTitle: " ML Engineer and Full Stack Developer . Always learning.",
-  resumeLink: "https://www.linkedin.com/in/harhal-abhyankar-095b17198/",
+  full_name: "Harshal Abhyankar(Omniwot)",
+  subTitle: `
+Master's student at UIUC, ML Engineer and 
+Full Stack Developer. Always learning.`,
+  resumeLink: "https://www.linkedin.com/in/harshal-abhyankar-095b17198/",
   mail: "mailto:abhyankarharshal22.gaming@gmail.com",
 };
 
@@ -33,11 +35,16 @@ const skills = {
       title: "ML and Data Science",
       fileName: "DataScienceImg",
       skills: [
-        "🔶 Developing and deploying machine learning models using Python",
-        "🔶 Building and maintaining data pipelines with Azure Databricks, Apache Spark and Azure Data Factory",
-        "🔶 Performing data analysis and visualization with tools like PySpark and PowerBI",
-        "🔶 Implementing Natural Language Processing (NLP) techniques for text classification",
-        "🔶 Working with vector databases and advanced data retrieval methods for RAG",
+        `🔶 Developing and deploying machine learning models using
+       Python`,
+        `🔶 Building and maintaining data pipelines with Azure 
+       Databricks, Apache Spark and Azure Data Factory`,
+        `🔶 Performing data analysis and visualization with tools 
+       like PySpark and PowerBI`,
+        `🔶 Implementing Natural Language Processing (NLP) techniques 
+       for text classification`,
+        `🔶 Working with vector databases and advanced data retrieval 
+       methods for RAG`,
       ],
       softwareSkills: [
         {
@@ -131,11 +138,13 @@ const skills = {
       title: "Backend Development",
       fileName: "FullStackImg",
       skills: [
-        "🔶 Develop highly interactive Front end / User Interfaces for your web and mobile applications",
-        "🔶 Building responsive website front end using ReactJS",
-        "🔶 Developing mobile applications using Flutter in Android Studio",
-        "🔶 Creating application backend in Node, Express & Postgresql",
-        "🔶 Integration of third party services such as Firebase/ AWS / MongoDB Cloud",
+        `🔶 Develop highly interactive Front end / User Interfaces 
+       for your web and mobile applications`,
+        `🔶 Building responsive website front end using ReactJS`,
+        `🔶 Creating application backend in Node, Express 
+       & Postgresql`,
+        `🔶 Integration of third party services such as 
+       Firebase/ AWS / MongoDB Cloud`,
       ],
       softwareSkills: [
         {
@@ -169,7 +178,7 @@ const skills = {
         },
         {
           skillName: "NodeJS",
-          fontAwesomeClassname: "simple-icons:node-dot-js",
+          fontAwesomeClassname: "simple-icons:nodedotjs",
           style: {
             color: "#339933",
           },
@@ -264,22 +273,22 @@ const skills = {
       ],
       softwareSkills: [
         {
+          skillName: "Azure",
+          fontAwesomeClassname: "simple-icons:microsoftazure",
+          style: {
+            color: "#0089D6",
+          },
+        },
+        {
+          skillName: "GCP",
+          fontAwesomeClassname: "simple-icons:googlecloud",
+          style: {
+            color: "#4285F4",
+          },
+        },
+        {
           skillName: "AWS",
           fontAwesomeClassname: "simple-icons:amazonaws",
-          style: {
-            color: "#FF9900",
-          },
-        },
-        {
-          skillName: "Netlify",
-          fontAwesomeClassname: "simple-icons:netlify",
-          style: {
-            color: "#38AFBB",
-          },
-        },
-        {
-          skillName: "Heroku",
-          fontAwesomeClassname: "simple-icons:heroku",
           style: {
             color: "#6863A6",
           },
@@ -615,7 +624,7 @@ const projectsHeader = {
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "enigma.png",
+    profile_image_path: "file.jpg",
     description:
       "You can contact me at the places mentioned below. I will try to get back to you as fast as I can. ",
   },
@@ -625,93 +634,231 @@ const projects = {
   data: [
     {
       id: "0",
-      name:
-        "IoT Based Precision Agriculture for weather alerts and Farm advisory",
-      url: "",
-      description: `Details of this project cannot be made public as its patent is being filed. `,
-      languages: [
-        {
-          name: "NodeJs",
-          iconifyClass: "logos-nodejs",
-        },
-        {
-          name: "Augmented Reality",
-          iconifyClass: "bi:badge-ar",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "",
-          iconifyClass: "ri:github-fill",
-        },
-        // {
-        //   name: "Devpost",
-        //   url: "https://devpost.com/software/keep-calm-and-carry-on",
-        //   iconifyClass: "fluent:window-dev-edit-20-filled",
-        // },
-        // {
-        //   name: "Live Demo",
-        //   url:
-        //     "https://akshitagupta15june.github.io/Keep-Calm-and-Carry-On.github.io/",
-        //   iconifyClass: "mdi:web",
-        // },
-      ],
-    },
-    {
-      id: "1",
-      name: "Options backtesting system using Numpy and Pandas",
-      url: "https://github.com/kevalvavaliya/Yog4Life",
-      description:
-        "An app for helping people their healthy life. Yog4Life Has a feed feature which is help to get information from the folks, Yog4Life has an anonymous chat room to get connected with the world.",
-      languages: [
-        {
-          name: "Flutter",
-          iconifyClass: "logos-flutter",
-        },
-        {
-          name: "NodeJs",
-          iconifyClass: "logos-nodejs",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/kevalvavaliya/Yog4Life",
-          iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Devfolio",
-          url: "https://devfolio.co/projects/yoglife-b20d",
-          iconifyClass: "fluent:window-dev-edit-20-filled",
-        },
-      ],
-    },
-    {
-      id: "2",
-      name: "Options backtesting system using Numpy and Pandas",
-      url:
-        "Options backtesting system using Numpy and Pandas to test specific option chains for Iron butterfly strategy with a fifth dynamic leg for hedging.",
-      description: "",
+      name: "Do I Know You?",
+      url: "https://github.com/Omniwot/DoIKnowYou",
+      description: `Currently working on an AI that remembers every face you meet for Builspace Nights&Weekends s5.`,
       languages: [
         {
           name: "Python",
           iconifyClass: "logos-python",
         },
+        {
+          name: "LangChain",
+          iconifyClass: "simple-icons:langchain",
+        },
+        {
+          name: "OpenAI API",
+          iconifyClass: "simple-icons:openai",
+        },
       ],
       links: [
         {
           name: "Github",
-          url: "",
+          url: "https://github.com/Omniwot/DoIKnowYou",
           iconifyClass: "ri:github-fill",
         },
       ],
     },
     {
+      id: "1",
+      name: "Chain-of-Verification with Langchain, Python and DuckDuckGoSearch",
+      url:
+        "https://github.com/Omniwot/Chain-of-Verification_with_LCEL-DuckDuckGo",
+      description: `This is an implementation of Chain-of-Verification, from this research paper (https://arxiv.org/abs/2309.11495) with addition of DuckDuckGoSearch based verification.`,
+      languages: [
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+        {
+          name: "LangChain",
+          iconifyClass: "simple-icons:langchain",
+        },
+        {
+          name: "OpenAI API",
+          iconifyClass: "simple-icons:openai",
+        },
+      ],
+      links: [
+        {
+          name: "Github",
+          url:
+            "https://github.com/Omniwot/Chain-of-Verification_with_LCEL-DuckDuckGo",
+          iconifyClass: "ri:github-fill",
+        },
+      ],
+    },
+    {
+      id: "2",
+      name: "GPT4 based Autonomous Python Code Interpreter and Generator Agent",
+      url: "",
+      description: `Engineered an AI system using GPT-4 for automated Python code interpretation and generation, leveraging OpenAI Functions and LangChain. Enhanced coding efficiency by integrating PythonREPL, CSV, and Router Agents, into a unified Agent framework.
+      `,
+      languages: [
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+        {
+          name: "LangChain",
+          iconifyClass: "simple-icons:langchain",
+        },
+        {
+          name: "OpenAI API",
+          iconifyClass: "simple-icons:openai",
+        },
+      ],
+      links: [],
+    },
+    {
       id: "3",
+      name: "F1 Data Analytics with Azure Databricks and Data Factory",
+      url: "",
+      description: `Developed end-to-end data analytics solution with Azure Databricks, Apache Spark, ADLS, and Azure Data Factory. Implemented medallion architecture leveraging PySpark and Spark SQL for data ingestion, transformation, and analysis connected to PowerBI for analytical dashboards.`,
+      languages: [
+        {
+          name: "Azure",
+          iconifyClass: "vscode-icons:file-type-azure",
+        },
+        {
+          name: "Apache Spark",
+          iconifyClass: "logos-apache-spark",
+        },
+        {
+          name: "PowerBI",
+          iconifyClass: "logos-power-bi",
+        },
+      ],
+      links: [],
+    },
+    {
+      id: "4",
+      name: "Loan Defaults Analysis and Prediction",
+      url: "",
+      description: `Implemented data cleaning, feature engineering, and analytical methods to gain valuable insights into Loan defaults. Applied and compared various machine learning algorithms to determine the best predictive models.`,
+      languages: [
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+        {
+          name: "Numpy",
+          iconifyClass: "logos-numpy",
+        },
+        {
+          name: "Pandas",
+          iconifyClass: "logos-pandas",
+        },
+        {
+          name: "Scikit learn",
+          iconifyClass: "logos-scikit-learn",
+        },
+        {
+          name: "Scipy",
+          iconifyClass: "logos-scipy",
+        },
+        {
+          name: "Seaborn",
+          iconifyClass: "logos-seaborn",
+        },
+        {
+          name: "Matplotlib",
+          iconifyClass: "logos-matplotlib",
+        },
+      ],
+      links: [],
+    },
+    {
+      id: "5",
+      name: "Resume Classification using NLP Techniques",
+      url: "",
+      description: `Performed comparative analysis between Bag of Words, IDF, Word2Vec and basic BERT models for text classification. Created pre-processing pipeline, performed text cleaning and applied varied encoding and tokenization techniques.`,
+      languages: [
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+        {
+          name: "NLP",
+          iconifyClass: "vscode-icons:file-type-nlp",
+        },
+      ],
+      links: [],
+    },
+    {
+      id: "6",
+      name: "Analytical Dashboards and ETL Pipelines with NYC Taxi Data",
+      url: "",
+      description: `Engineered ETL pipelines to streamline data processing, ensuring data reliability using Azure Synapse Analytics. Developed intuitive analytical dashboards using Tableau and PowerBI, enabling exploration of NYC taxi metrics.`,
+      languages: [
+        {
+          name: "Azure",
+          iconifyClass: "vscode-icons:file-type-azure",
+        },
+        {
+          name: "Tableau",
+          iconifyClass: "logos-tableau",
+        },
+        {
+          name: "PowerBI",
+          iconifyClass: "logos-power-bi",
+        },
+      ],
+      links: [],
+    },
+    {
+      id: "7",
+      name:
+        "IoT Based Precision Agriculture for weather alerts and Farm advisory",
+      url: "",
+      description: `Details of this project cannot be made public as its patent is being filed.`,
+      languages: [
+        {
+          name: "NodeJs",
+          iconifyClass: "logos-nodejs",
+        },
+        {
+          name: "Arduino",
+          iconifyClass: "logos-arduino",
+        },
+        {
+          name: "ReactJS",
+          iconifyClass: "logos-react",
+        },
+        {
+          name: "NodeMCU",
+          iconifyClass: "logos-esp8266",
+        },
+      ],
+      links: [],
+    },
+    {
+      id: "8",
+      name: "Options backtesting system using Numpy and Pandas",
+      url: "",
+      description: `Options backtesting system using Numpy and Pandas to test specific option chains for Iron butterfly strategy with a fifth dynamic leg for hedging.`,
+      languages: [
+        {
+          name: "Python",
+          iconifyClass: "logos-python",
+        },
+        {
+          name: "Numpy",
+          iconifyClass: "logos-numpy",
+        },
+        {
+          name: "Pandas",
+          iconifyClass: "logos-pandas",
+        },
+      ],
+      links: [],
+    },
+    {
+      id: "9",
       name: "Project Medcare",
-      url: "https://github.com/Omniwot/hackerNewsReact",
-      description: "Hacker News Clone using React.",
+      url: "https://github.com/Omniwot/Project_Medcare",
+      description:
+        "This project is an implementation of Healthcare pricing engine that searches prices according to CPT codes of medical procedures or their description. We can also strore redacted versions of medical bills to collect pricing data from consumers using google cloud redaction engine. ",
       languages: [
         {
           name: "ReactJS",
@@ -733,17 +880,16 @@ const projects = {
       links: [
         {
           name: "Github",
-          url: "https://github.com/Omniwot/hackerNewsReact",
+          url: "https://github.com/Omniwot/Project_Medcare",
           iconifyClass: "ri:github-fill",
         },
       ],
     },
     {
-      id: "4",
+      id: "10",
       name: "IoT-Based Baby Monitoring System",
-      url: "https://github.com/kevalvavaliya/Emosic",
-      description:
-        "An app that plays music according to your mood. Created a playlist management UI and used SpotifyAPI to control player client based on mood detection using ml model.",
+      url: "https://github.com/Omniwot/IoTBased-BabyMonitoringSystem",
+      description: `An app that plays music according to your mood. Created a playlist management UI and used SpotifyAPI to control player client based on mood detection using ML model.`,
       languages: [
         {
           name: "HTML5",
@@ -757,59 +903,25 @@ const projects = {
           name: "Python",
           iconifyClass: "logos-python",
         },
-      ],
-      links: [
         {
-          name: "Github",
-          url: "https://github.com/kevalvavaliya/Emosic",
-          iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Devpost",
-          url: "https://devpost.com/software/emosic",
-          iconifyClass: "fluent:window-dev-edit-20-filled",
-        },
-      ],
-    },
-    {
-      id: "5",
-      name: "Fileblok",
-      url: "https://github.com/harikanani/Fileblok",
-      description:
-        "Keep your projects moving with seamless transfer experice. FileBlok is a file transfer app that allows you to transfer files from one device to another without any hassle. We built this app using Flutter, Node.js and StoryBlok.",
-      languages: [
-        {
-          name: "Flutter",
-          iconifyClass: "logos-flutter",
-        },
-        {
-          name: "NodeJs",
-          iconifyClass: "logos-nodejs",
-        },
-        {
-          name: "Storyblok",
-          iconifyClass: "logos-storyblok-icon",
+          name: "Arduino",
+          iconifyClass: "logos-arduino",
         },
       ],
       links: [
         {
           name: "Github",
-          url: "https://github.com/harikanani/Fileblok",
+          url: "https://github.com/Omniwot/IoTBased-BabyMonitoringSystem",
           iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Devpost",
-          url: "https://devpost.com/software/fileblok",
-          iconifyClass: "fluent:window-dev-edit-20-filled",
         },
       ],
     },
     {
-      id: "6",
-      name: "BAUDDIK-GEEKS PORTFOLIO",
-      url: "https://github.com/Bauddhik-Geeks/Bauddhik-Geeks.github.io",
+      id: "11",
+      name: "GitHub Portfolio",
+      url: "https://omniwot.github.io",
       description:
-        "Awesome Community Portfolio website for Bauddhik-Geeks community",
+        "A Personal Portfolio Website that showcases my work and experience. which is hosted on Github Pages.",
       languages: [
         {
           name: "HTML5",
@@ -823,58 +935,26 @@ const projects = {
           name: "JavaScript",
           iconifyClass: "logos-javascript",
         },
+        {
+          name: "SCSS",
+          iconifyClass: "vscode-icons:file-type-scss2",
+        },
       ],
       links: [
         {
           name: "Github",
-          url: "https://github.com/Bauddhik-Geeks/Bauddhik-Geeks.github.io",
+          url: "https://github.com/omniwot/omniwot.github.io",
           iconifyClass: "ri:github-fill",
         },
         {
           name: "Live Demo",
-          url: "https://bauddhikgeeks.co/",
+          url: "https://omniwot.github.io/",
           iconifyClass: "mdi:web",
         },
       ],
     },
     {
-      id: "7",
-      name: "Votechain",
-      url: "https://github.com/abhigoyani/votechain",
-      description:
-        "Awesome Community Portfolio website for Bauddhik-Geeks community",
-      languages: [
-        {
-          name: "Flask",
-          iconifyClass: "logos-flask",
-        },
-        {
-          name: "Python",
-          iconifyClass: "logos-python",
-        },
-        {
-          name: "HTML5",
-          iconifyClass: "logos-html-5",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "logos-css-3",
-        },
-        {
-          name: "MongoDB",
-          iconifyClass: "logos-mongodb-icon",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/abhigoyani/votechain",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "3",
+      id: "10",
       name: "Hacker News",
       url: "https://github.com/Omniwot/hackerNewsReact",
       description: "Hacker News Clone using React.",
@@ -901,133 +981,6 @@ const projects = {
           name: "Github",
           url: "https://github.com/Omniwot/hackerNewsReact",
           iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "9",
-      name: "node-blockchain",
-      url: "https://github.com/harikanani/node-blockchain",
-      description:
-        "A simple blockchain and cryptocurrency wallet implemented in Node.js and TypeScript (for learning purposes).",
-      languages: [
-        {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
-        },
-        {
-          name: "TypeScript",
-          iconifyClass: "skill-icons:typescript",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/harikanani/node-blockchain",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "10",
-      name: "Know Me Well",
-      url: "https://github.com/harikanani/personal-portfolio",
-      description:
-        "A simple command line interface based quiz app to know more about me :).",
-      languages: [
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
-        },
-        {
-          name: "Repl.it",
-          iconifyClass: "logos-replit-icon",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/harikanani/personal-portfolio",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "11",
-      name: "Bloggify",
-      url: "https://github.com/harikanani/Bloggify",
-      description: "A Simple REST API for Blog Application.",
-      languages: [
-        {
-          name: "NodeJS",
-          iconifyClass: "logos-nodejs",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/harikanani/Bloggify",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "12",
-      name: "Stargazzers",
-      url: "https://github.com/harikanani/stargazers",
-      description: "An Unofficial API for GitHub Repo Stars Count",
-      languages: [
-        {
-          name: "NodeJs",
-          iconifyClass: "logos-nodejs",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/harikanani/stargazers",
-          iconifyClass: "ri:github-fill",
-        },
-      ],
-    },
-    {
-      id: "13",
-      name: "GitHub Portfolio",
-      url: "https://github.com/harikanani/harikanani.github.io",
-      description:
-        "A Personal Portfolio Website that showcases my work and experience. which is hosted on Github Pages.",
-      languages: [
-        {
-          name: "HTML5",
-          iconifyClass: "vscode-icons:file-type-html",
-        },
-        {
-          name: "CSS3",
-          iconifyClass: "vscode-icons:file-type-css",
-        },
-        {
-          name: "JavaScript",
-          iconifyClass: "logos-javascript",
-        },
-        {
-          name: "SCSS",
-          iconifyClass: "vscode-icons:file-type-scss2",
-        },
-      ],
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/harikanani/harikanani.github.io",
-          iconifyClass: "ri:github-fill",
-        },
-        {
-          name: "Live Demo",
-          url: "https://harikanani.github.io/",
-          iconifyClass: "mdi:web",
         },
       ],
     },

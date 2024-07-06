@@ -11,10 +11,12 @@
 
 .skills-text {
   font-size: 20px;
+  white-space: pre;
 }
 
 .skills-text-div {
   margin-left: 50px;
+
   margin-top: 3%;
   padding-top: 80px;
   font-family: "Google Sans Regular";

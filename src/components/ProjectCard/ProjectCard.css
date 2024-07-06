@@ -38,7 +38,7 @@
 }
 
 .repo-name {
-  white-space: nowrap;
+  white-space: pre-wrap;
   line-height: 1.1;
   text-overflow: ellipsis;
   color: rgb(36, 41, 46);
@@ -47,7 +47,7 @@
   font-size: 25px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  overflow: hidden;
+  overflow: visible;
   margin: 0px;
 }
 
