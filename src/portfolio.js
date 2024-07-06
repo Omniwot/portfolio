@@ -30,15 +30,14 @@ const socialMediaLinks = {
 const skills = {
   data: [
     {
-      title: "Machine Learning and Data Science",
+      title: "ML and Data Science",
       fileName: "DataScienceImg",
       skills: [
         "🔶 Developing and deploying machine learning models using Python",
-        "🔶 Building and maintaining data pipelines with Apache Spark and Azure Data Factory",
+        "🔶 Building and maintaining data pipelines with Azure Databricks, Apache Spark and Azure Data Factory",
         "🔶 Performing data analysis and visualization with tools like PySpark and PowerBI",
         "🔶 Implementing Natural Language Processing (NLP) techniques for text classification",
         "🔶 Working with vector databases and advanced data retrieval methods for RAG",
-        "🔶 Integrating third-party services such as Firebase, AWS, and MongoDB Cloud",
       ],
       softwareSkills: [
         {
@@ -50,9 +49,9 @@ const skills = {
         },
         {
           skillName: "SQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
+          fontAwesomeClassname: "simple-icons:databricks",
           style: {
-            color: "#336791",
+            color: "#CB3837",
           },
         },
         {
@@ -97,13 +96,7 @@ const skills = {
             color: "#336791",
           },
         },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#439743",
-          },
-        },
+
         {
           skillName: "Git",
           fontAwesomeClassname: "simple-icons:git",
@@ -112,30 +105,15 @@ const skills = {
           },
         },
         {
-          skillName: "ReactJS",
-          fontAwesomeClassname: "simple-icons:react",
+          skillName: "Streamlit",
+          fontAwesomeClassname: "simple-icons:streamlit",
           style: {
-            color: "#61DAFB",
+            color: "#E25A1C",
           },
         },
         {
-          skillName: "NodeJS",
-          fontAwesomeClassname: "simple-icons:node-dot-js",
-          style: {
-            color: "#339933",
-          },
-        },
-        {
-          skillName: "JavaScript",
-          fontAwesomeClassname: "simple-icons:javascript",
-          style: {
-            backgroundColor: "#FFFFFF",
-            color: "#F7DF1E",
-          },
-        },
-        {
-          skillName: "C",
-          fontAwesomeClassname: "simple-icons:c",
+          skillName: "Ray.io",
+          fontAwesomeClassname: "simple-icons:ray",
           style: {
             color: "#A8B9CC",
           },
@@ -356,9 +334,9 @@ const degrees = {
       duration: "Fall 2023 - Present",
       descriptions: [
         "🔶 I'm currently pursuing my masters in Information Management.",
-        "🔶 My coursework in Fall 2023 includes Information Consulting by Prof. Yoo-Seong Song, Data Warehousing and Business Intelligence by Michael Wonderlich and Data Statistical Methods and Modelling by Stephanie Besser.   ",
-        // "🔶 I have also completed various online courses for Backend , Web , Mobile App Development, etc.",
-        // "🔶 I have implemented several projects based on what I've leart under my Computer Engineering course. ",
+        "🔶 My coursework includes Methods of Data Science, Database Design and Prototyping, Information Consulting, Data Warehousing and Business Intelligence and Data Statistical Methods and Modelling by Stephanie Besser.   ",
+        "🔶 I have also completed various online courses for Frontend/Backend Web Development, Computer Vision, Retrieval Augmented Generation and LLMs.",
+        "🔶 I have implemented several projects and earned certifications from Microsoft in Data Engineering and Analytics.",
       ],
       website_link: "https://illinois.edu/",
     },
@@ -369,9 +347,9 @@ const degrees = {
       alt_name: "BITS Pilani",
       duration: "2019 - 2023",
       descriptions: [
-        "🔶 I have completed CS electives including Digital Image Processing, Operating Systems, Multimedia computing, Internet of Things and Human Resource Development.",
+        "🔶 I have completed CS electives including Digital Image Processing, Operating Systems, Multimedia computing, and Internet of Things.",
         "🔶 I have also completed various online courses for Backend , Web , Mobile App Development and Full Stack Development and implemented them in personal projects.",
-        "🔶 I have worked with 2 startups and 2 MNCs throughout my undergraduate studies for practical experience.",
+        "🔶 I have worked with 2 startups and 2 MNCs during my undergraduate studies for practical experience.",
       ],
       website_link: "https://www.bits-pilani.ac.in/",
     },
@@ -380,6 +358,51 @@ const degrees = {
 
 const certifications = {
   certifications: [
+    {
+      title: "Microsoft Certified Azure Solutions Architect Expert",
+      subtitle: "Azure Cloud",
+      logo_path: "azure-architect-expert.png",
+      certificate_link:
+        "https://learn.microsoft.com/api/credentials/share/en-us/HarshalAbhyankar-8339/A8A337BCE834EA82?sharingId",
+      alt_name: "certification",
+      color_code: "#2AAFEE",
+    },
+    {
+      title: "Microsoft Certified Azure Data Engineer Associate",
+      subtitle: "Azure Cloud",
+      logo_path: "azure-data.png",
+      certificate_link:
+        "https://learn.microsoft.com/api/credentials/share/en-us/HarshalAbhyankar-8339/E2C5E82430A2F4C1?sharingId",
+      alt_name: "certification",
+      color_code: "#2AAFEE",
+    },
+    {
+      title: "Microsoft Certified Azure Security Engineer Associate",
+      subtitle: "Azure Cloud",
+      logo_path: "azure-security-engineer.png",
+      certificate_link:
+        "https://learn.microsoft.com/api/credentials/share/en-us/HarshalAbhyankar-8339/88A87BD1A0F4AC4B?sharingId",
+      alt_name: "certification",
+      color_code: "#2AAFEE",
+    },
+    {
+      title: "Microsoft Certified Azure Administrator Associate",
+      subtitle: "Azure Cloud",
+      logo_path: "azure-admin.png",
+      certificate_link:
+        "https://learn.microsoft.com/api/credentials/share/en-us/HarshalAbhyankar-8339/79894CD555F9304?sharingId",
+      alt_name: "certification",
+      color_code: "#2AAFEE",
+    },
+    {
+      title: " LLMs Mastery: Complete Guide to Transformers & Generative AI",
+      subtitle: "Udemy",
+      logo_path: "udemy.png",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-b50b8926-3e75-4a15-847b-ab2419dede65/",
+      alt_name: "certificate",
+      color_code: "#7a33e0",
+    },
     {
       title: "Python and Statistics for Financial Analysis",
       subtitle: "Python/Finance",
@@ -475,6 +498,19 @@ const experience = {
       title: "Work Experience",
       experiences: [
         {
+          title: "SWE Intern (ML/AI)",
+          company: "BayInfotech",
+          company_url: "https://www.bay-infotech.com/",
+          logo_path: "bay_infotech.png",
+          duration: "May 2024 - Present",
+          location: "Livermore, California",
+          description: `•	Researching vector databases and data retrieval methods for advanced Retrieval Augmented Generation.
+•	Creating data pipelines to ingest data using various embedding techniques into vector databases.
+•	Leading a team of engineers and researchers to develop MVPs of experimental RAG methods.
+`,
+          color: "#0071C5",
+        },
+        {
           title: "SWE Intern",
           company: "Cisco Systems (India)",
           company_url: "https://www.cisco.com/",
@@ -482,9 +518,9 @@ const experience = {
           duration: "August 2022 - Dec 2022",
           location: "Bangalore, India",
           description: `• Created micro-frontend implementations of existing frontends of an application. (ReactJS, Babel, Direflow)
-          • Assisted in UI and Frontend development of a new project. (ReactJS, Material UI, HTML, CSS)
-          • Worked on Automation testing of web workflows and load testing. (Python, Selenium) and manual testing.
-          `,
+• Assisted in UI and Frontend development of a new project. (ReactJS, Material UI, HTML, CSS)
+• Worked on Automation testing of web workflows and load testing. (Python, Selenium) and manual testing.
+        `,
           color: "#0071C5",
         },
         {
@@ -493,10 +529,10 @@ const experience = {
           company_url: "https://www.zeeve.io/",
           logo_path: "zeeve.png",
           duration: "April 2022 - August 2022",
-          location: "Work From Home",
-          description: `• I was rehired by Zeeve after my externship ended to continue working on their admin portal. 
-          • Led a team of three to develop and design client admin portal (NodeJS, Typescript, ReactJS, PostgreSQL) 
-          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
+          location: "Remote",
+          description: `• I was rehired by Zeeve after my externship ended to continue working on their admin portal.
+• Led a team of three to develop and design client admin portal (NodeJS, Typescript, ReactJS, PostgreSQL)
+• Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
           color: "#ee3c26",
         },
         {
@@ -505,10 +541,10 @@ const experience = {
           company_url: "https://www.zeeve.io/",
           logo_path: "zeeve.png",
           duration: "January 2022 - April 2022",
-          location: "Work From Home",
+          location: "Remote",
           description: `• One of the students selected for the GitHub Externship '22 Winter Cohort out of 14k+ applications. 
-          • Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
-          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
+• Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
+• Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
           color: "#ee3c26",
         },
         {
@@ -517,10 +553,10 @@ const experience = {
           company_url: "https://www.cybervardan.com/",
           logo_path: "cyber.png",
           duration: "January 2022 - April 2022",
-          location: "Work From Home",
+          location: "Los Altos, CA (Remote)",
           description: `• One of the students selected for the GitHub Externship '22 Winter Cohort out of 14k+ applications. 
-          • Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
-          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
+• Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
+• Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
           color: "#ee3c26",
         },
         {
@@ -529,10 +565,10 @@ const experience = {
           company_url: "https://www.ltimindtree.com/",
           logo_path: "cyber.png",
           duration: "January 2022 - April 2022",
-          location: "Work From Home",
+          location: "Mumbai, India",
           description: `• One of the students selected for the GitHub Externship '22 Winter Cohort out of 14k+ applications. 
-          • Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
-          • Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
+• Worked on a Polygon SDK based PoC and design client admin portal frontend (ReactJS, Material UI, Bootstrap) 
+• Assisted in integration of multiple microservices related to networks and authentication with portal (NodeJS, PostgreSQL)`,
           color: "#ee3c26",
         },
       ],
@@ -548,7 +584,7 @@ const experience = {
           duration: "August 2019 - September 2021",
           location: "BITS, Pilani",
           description: `• Taught local students Math, Chemistry and Physics for 1.5 hours per day 3 days a week. 
-             • Assisted in all NSS events including UDAAN 2k19, Junoon 2k19 and Blood donation camps`,
+• Assisted in all NSS events including UDAAN 2k19, Junoon 2k19 and Blood donation camps`,
           color: "#FBBD18",
         },
         {
@@ -559,7 +595,7 @@ const experience = {
           duration: "August 2020 - September 2021",
           location: "BITS, Pilani",
           description: `• Organized and planned musical events, recitals, and performances.
-            • Coordinated logistics for events, including music selections, equipment setup, and scheduling`,
+• Coordinated logistics for events, including music selections, equipment setup, and scheduling`,
           color: "#4285F4",
         },
       ],
