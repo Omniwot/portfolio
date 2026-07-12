@@ -92,11 +92,11 @@ export default function MatrixLoader({ onDone }: Props) {
         y: rand(-h * 0.6, -brandSize * 2),
         trail: Array.from({ length: Math.floor(rand(8, 14)) }, pick),
         tick: Math.floor(rand(0, 6)),
-        speed: rand(0.55, 0.95),
+        speed: rand(0.9, 1.35),
         state: "falling" as const,
-        scrambleLeft: 14 + i * 3,
+        scrambleLeft: 7 + i * 2,
         display: pick(),
-        lockDelay: 18 + i * 10,
+        lockDelay: 6 + i * 3,
       }));
     };
 
@@ -180,8 +180,8 @@ export default function MatrixLoader({ onDone }: Props) {
         if (L.state === "falling") {
           if (L.lockDelay > 0) {
             L.lockDelay -= 1;
-          } else if (L.tick % Math.max(2, Math.round(4 / L.speed)) === 0) {
-            L.y += brandSize * 0.55;
+          } else if (L.tick % Math.max(1, Math.round(2.2 / L.speed)) === 0) {
+            L.y += brandSize * 0.78;
             if (Math.random() < 0.08) L.display = pick();
             // shift trail
             L.trail.pop();
@@ -209,10 +209,8 @@ export default function MatrixLoader({ onDone }: Props) {
             L.display = pick();
           }
         } else if (L.state === "scramble") {
-          if (L.tick % 2 === 0) {
-            L.scrambleLeft -= 1;
-            L.display = L.scrambleLeft <= 0 ? L.target : pick();
-          }
+          L.scrambleLeft -= 1;
+          L.display = L.scrambleLeft <= 0 ? L.target : pick();
           ctx.font = `${brandSize}px ${TERM_FONT}`;
           ctx.fillStyle = "#39ff14";
           ctx.shadowColor = "rgba(57, 255, 20, 0.85)";
@@ -252,13 +250,13 @@ export default function MatrixLoader({ onDone }: Props) {
         ctx.fillText("> identity_resolved", w / 2, targetY + brandSize * 0.95);
         ctx.textAlign = "start";
 
-        if (!outRef.current && lockedAt !== null && now - lockedAt > 1400) {
+        if (!outRef.current && lockedAt !== null && now - lockedAt > 650) {
           outRef.current = true;
         }
       }
 
       if (outRef.current) {
-        fade = Math.max(0, fade - 0.02);
+        fade = Math.max(0, fade - 0.045);
         ctx.fillStyle = `rgba(7, 11, 10, ${1 - fade})`;
         ctx.fillRect(0, 0, w, h);
         if (fade <= 0 && !doneRef.current) {
@@ -284,7 +282,7 @@ export default function MatrixLoader({ onDone }: Props) {
         doneRef.current = true;
         onDone();
       }
-    }, 5000);
+    }, 3500);
 
     resize();
     window.addEventListener("resize", resize);
