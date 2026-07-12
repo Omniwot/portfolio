@@ -131,7 +131,7 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    animation: menuBoot 0.2s linear both;
+    animation: menuIn 0.18s ease-out both;
   }
 
   .link {
@@ -143,22 +143,12 @@
   }
 }
 
-@keyframes menuBoot {
-  0% {
+@keyframes menuIn {
+  from {
     opacity: 0;
-    filter: brightness(2.2);
   }
-  40% {
+  to {
     opacity: 1;
-    filter: brightness(1.6);
-  }
-  70% {
-    opacity: 0.55;
-    filter: brightness(0.9);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(1);
   }
 }
 

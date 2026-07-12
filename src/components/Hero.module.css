@@ -41,7 +41,6 @@
   font-size: clamp(1rem, 2.2vw, 1.15rem);
   letter-spacing: 0.04em;
   text-shadow: 0 0 12px rgba(57, 255, 20, 0.45);
-  animation: phosphorIn 0.28s linear both;
 }
 
 .cmdList {
@@ -49,7 +48,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.05rem;
-  animation: phosphorIn 0.32s linear 0.2s both;
 }
 
 .heroCmd {
@@ -64,7 +62,6 @@
   letter-spacing: 0.06em;
   color: var(--accent-bright);
   text-shadow: 0 0 18px rgba(57, 255, 20, 0.3);
-  animation: phosphorIn 0.32s linear both;
   overflow-wrap: anywhere;
 }
 
@@ -74,7 +71,6 @@
   font-weight: 400;
   color: var(--text);
   letter-spacing: 0.03em;
-  animation: phosphorIn 0.28s linear 0.05s both;
 }
 
 .sub {
@@ -82,7 +78,6 @@
   font-size: clamp(1rem, 2.2vw, 1.1rem);
   color: var(--text-muted);
   letter-spacing: 0.03em;
-  animation: phosphorIn 0.28s linear 0.1s both;
 }
 
 .actions {
@@ -90,7 +85,6 @@
   flex-wrap: wrap;
   gap: 0.65rem;
   margin-top: 1.35rem;
-  animation: phosphorIn 0.28s linear 0.16s both;
 }
 
 .primary,
@@ -138,7 +132,6 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.65rem;
-  animation: phosphorIn 0.32s linear 0.2s both;
 }
 
 .quickLink {
@@ -170,29 +163,6 @@
   color: var(--text-muted);
   font-size: 0.9rem;
   line-height: 1.4;
-}
-
-@keyframes phosphorIn {
-  0% {
-    opacity: 0;
-    filter: brightness(2.6);
-  }
-  25% {
-    opacity: 1;
-    filter: brightness(2);
-  }
-  50% {
-    opacity: 0.35;
-    filter: brightness(0.7);
-  }
-  75% {
-    opacity: 1;
-    filter: brightness(1.35);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(1);
-  }
 }
 
 @media (max-width: 900px) {
@@ -237,8 +207,6 @@
   .cmdList,
   .actions,
   .quick {
-    animation: none;
     opacity: 1;
-    filter: none;
   }
 }

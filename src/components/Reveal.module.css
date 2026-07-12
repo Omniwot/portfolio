@@ -7,40 +7,25 @@
   animation: revealSafety 0s linear 1.2s forwards;
 }
 
-/* Explicit end state — do not rely on animation fill alone (Android WebView) */
 .visible {
   opacity: 1;
-  filter: brightness(1);
-  animation: matrixBoot 0.28s linear both;
+  animation: lineIn 0.22s ease-out both;
 }
 
 @keyframes revealSafety {
   to {
     opacity: 1;
-    filter: brightness(1);
   }
 }
 
-@keyframes matrixBoot {
-  0% {
+@keyframes lineIn {
+  from {
     opacity: 0;
-    filter: brightness(2.4);
+    transform: translateY(4px);
   }
-  25% {
+  to {
     opacity: 1;
-    filter: brightness(2);
-  }
-  50% {
-    opacity: 0.4;
-    filter: brightness(0.75);
-  }
-  75% {
-    opacity: 1;
-    filter: brightness(1.4);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(1);
+    transform: none;
   }
 }
 
@@ -49,7 +34,7 @@
   .reveal:not(.visible),
   .visible {
     opacity: 1;
-    filter: none;
+    transform: none;
     animation: none;
   }
 }

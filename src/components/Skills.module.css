@@ -130,8 +130,8 @@
   background: rgba(57, 255, 20, 0.04);
   padding: 0.4rem 0.65rem;
   border-radius: 2px;
-  opacity: 1;
-  animation: chipBoot 0.22s linear both;
+  opacity: 0;
+  animation: chipIn 0.2s ease-out forwards;
   transition: none;
 }
 
@@ -140,25 +140,14 @@
   border-color: rgba(57, 255, 20, 0.55);
   background: rgba(57, 255, 20, 0.1);
   box-shadow: 0 0 14px rgba(57, 255, 20, 0.2);
-  filter: brightness(1.25);
 }
 
-@keyframes chipBoot {
-  0% {
+@keyframes chipIn {
+  from {
     opacity: 0;
-    filter: brightness(2.2);
   }
-  40% {
+  to {
     opacity: 1;
-    filter: brightness(1.7);
-  }
-  70% {
-    opacity: 0.45;
-    filter: brightness(0.8);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(1);
   }
 }
 
