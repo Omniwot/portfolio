@@ -130,8 +130,8 @@
   background: rgba(57, 255, 20, 0.04);
   padding: 0.4rem 0.65rem;
   border-radius: 2px;
-  opacity: 0;
-  animation: chipBoot 0.22s steps(4, end) forwards;
+  opacity: 1;
+  animation: chipBoot 0.22s linear both;
   transition: none;
 }
 
@@ -146,19 +146,19 @@
 @keyframes chipBoot {
   0% {
     opacity: 0;
-    filter: brightness(3);
-  }
-  33% {
-    opacity: 1;
     filter: brightness(2.2);
   }
-  66% {
-    opacity: 0.35;
-    filter: brightness(0.6);
+  40% {
+    opacity: 1;
+    filter: brightness(1.7);
+  }
+  70% {
+    opacity: 0.45;
+    filter: brightness(0.8);
   }
   100% {
     opacity: 1;
-    filter: none;
+    filter: brightness(1);
   }
 }
 

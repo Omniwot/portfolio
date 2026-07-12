@@ -1,52 +1,55 @@
 .reveal {
   opacity: 0;
-  filter: brightness(2.4);
-  clip-path: inset(0 0 100% 0);
 }
 
+/* If JS/IntersectionObserver never marks visible, still show on Android */
+.reveal:not(.visible) {
+  animation: revealSafety 0s linear 1.2s forwards;
+}
+
+/* Explicit end state — do not rely on animation fill alone (Android WebView) */
 .visible {
-  animation: matrixBoot 0.32s steps(6, end) both;
+  opacity: 1;
+  filter: brightness(1);
+  animation: matrixBoot 0.28s linear both;
+}
+
+@keyframes revealSafety {
+  to {
+    opacity: 1;
+    filter: brightness(1);
+  }
 }
 
 @keyframes matrixBoot {
   0% {
     opacity: 0;
-    filter: brightness(3);
-    clip-path: inset(0 0 100% 0);
+    filter: brightness(2.4);
   }
-  20% {
+  25% {
     opacity: 1;
-    filter: brightness(2.6);
-    clip-path: inset(0 0 72% 0);
+    filter: brightness(2);
   }
-  40% {
-    opacity: 0.35;
-    filter: brightness(0.5);
-    clip-path: inset(0 0 48% 0);
+  50% {
+    opacity: 0.4;
+    filter: brightness(0.75);
   }
-  60% {
+  75% {
     opacity: 1;
-    filter: brightness(1.9);
-    clip-path: inset(0 0 18% 0);
-  }
-  80% {
-    opacity: 0.9;
-    filter: brightness(1.2);
-    clip-path: inset(0 0 0 0);
+    filter: brightness(1.4);
   }
   100% {
     opacity: 1;
-    filter: none;
-    clip-path: inset(0 0 0 0);
+    filter: brightness(1);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal,
+  .reveal:not(.visible),
   .visible {
     opacity: 1;
     filter: none;
-    clip-path: none;
     animation: none;
   }
 }

@@ -8,7 +8,7 @@ type Props = {
   delay?: number;
 };
 
-/** Fast terminal-style reveal — content snaps in like a typed dump. */
+/** Terminal-style reveal with a hard visible fallback for mobile browsers. */
 export default function Reveal({ children, className = "", delay = 0 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -16,27 +16,48 @@ export default function Reveal({ children, className = "", delay = 0 }: Props) {
     const el = ref.current;
     if (!el) return;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const show = () => {
       el.classList.add(styles.visible);
+    };
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      show();
       return;
     }
 
-    let timer: number | undefined;
+    let delayTimer: number | undefined;
+    let fallbackTimer: number | undefined;
+    let shown = false;
+
+    const reveal = () => {
+      if (shown) return;
+      shown = true;
+      if (delay > 0) {
+        delayTimer = window.setTimeout(show, delay);
+      } else {
+        show();
+      }
+    };
+
+    // Android: negative % rootMargin / high threshold can never fire
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
-          timer = window.setTimeout(() => {
-            el.classList.add(styles.visible);
-          }, delay);
+          reveal();
           io.disconnect();
         }
       },
-      { threshold: 0.08, rootMargin: "0px 0px -6% 0px" },
+      { threshold: 0, rootMargin: "64px 0px 64px 0px" },
     );
     io.observe(el);
+
+    // Absolute fallback — never leave CRT blocks invisible
+    fallbackTimer = window.setTimeout(reveal, 900 + delay);
+
     return () => {
       io.disconnect();
-      if (timer) window.clearTimeout(timer);
+      if (delayTimer) window.clearTimeout(delayTimer);
+      if (fallbackTimer) window.clearTimeout(fallbackTimer);
     };
   }, [delay]);
 

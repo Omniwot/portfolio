@@ -61,7 +61,15 @@ export default function MatrixLoader({ onDone }: Props) {
     }
 
     const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    if (!ctx) {
+      const t = window.setTimeout(() => {
+        if (!doneRef.current) {
+          doneRef.current = true;
+          onDone();
+        }
+      }, 200);
+      return () => window.clearTimeout(t);
+    }
 
     let ambient: AmbientCol[] = [];
     let letters: LetterStream[] = [];
@@ -270,6 +278,14 @@ export default function MatrixLoader({ onDone }: Props) {
       raf = requestAnimationFrame(draw);
     };
 
+    // Hard failsafe for Android / backgrounded tabs
+    const hardCap = window.setTimeout(() => {
+      if (!doneRef.current) {
+        doneRef.current = true;
+        onDone();
+      }
+    }, 5000);
+
     resize();
     window.addEventListener("resize", resize);
     raf = requestAnimationFrame(draw);
@@ -277,6 +293,7 @@ export default function MatrixLoader({ onDone }: Props) {
     return () => {
       running = false;
       cancelAnimationFrame(raf);
+      window.clearTimeout(hardCap);
       window.removeEventListener("resize", resize);
     };
   }, [onDone]);

@@ -3,50 +3,37 @@
   pointer-events: none;
 }
 
+/* End-state lives on the class so Android never stays stuck mid-animation */
 .shellIn {
-  animation: crtPower 0.45s steps(8, end) both;
+  opacity: 1;
   pointer-events: auto;
+  animation: crtPower 0.4s linear both;
 }
 
 @keyframes crtPower {
   0% {
     opacity: 0;
-    filter: brightness(4) contrast(1.4);
-    clip-path: inset(48% 0 48% 0);
+    filter: brightness(2.8);
   }
-  12% {
+  18% {
     opacity: 1;
-    filter: brightness(3);
-    clip-path: inset(42% 0 42% 0);
+    filter: brightness(2.2);
   }
-  25% {
-    opacity: 0.2;
-    filter: brightness(0.4);
-    clip-path: inset(30% 0 30% 0);
+  36% {
+    opacity: 0.35;
+    filter: brightness(0.7);
   }
-  40% {
-    opacity: 1;
-    filter: brightness(2.4);
-    clip-path: inset(12% 0 12% 0);
-  }
-  55% {
-    opacity: 0.6;
-    filter: brightness(1.1);
-    clip-path: inset(4% 0 4% 0);
-  }
-  70% {
+  54% {
     opacity: 1;
     filter: brightness(1.7);
-    clip-path: inset(0 0 0 0);
   }
-  85% {
+  72% {
     opacity: 0.85;
     filter: brightness(1.15);
   }
   100% {
     opacity: 1;
-    filter: none;
-    clip-path: inset(0 0 0 0);
+    filter: brightness(1);
   }
 }
 
@@ -55,7 +42,6 @@
   .shellIn {
     opacity: 1;
     filter: none;
-    clip-path: none;
     animation: none;
     pointer-events: auto;
   }

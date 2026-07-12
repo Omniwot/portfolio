@@ -131,7 +131,7 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    animation: menuBoot 0.22s steps(4, end) both;
+    animation: menuBoot 0.2s linear both;
   }
 
   .link {
@@ -146,23 +146,19 @@
 @keyframes menuBoot {
   0% {
     opacity: 0;
-    filter: brightness(3);
-    clip-path: inset(0 0 100% 0);
+    filter: brightness(2.2);
   }
   40% {
     opacity: 1;
-    filter: brightness(2);
-    clip-path: inset(0 0 40% 0);
+    filter: brightness(1.6);
   }
   70% {
-    opacity: 0.5;
-    filter: brightness(0.8);
-    clip-path: inset(0 0 0 0);
+    opacity: 0.55;
+    filter: brightness(0.9);
   }
   100% {
     opacity: 1;
-    filter: none;
-    clip-path: inset(0 0 0 0);
+    filter: brightness(1);
   }
 }
 
