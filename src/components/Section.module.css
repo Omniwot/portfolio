@@ -48,8 +48,31 @@
 .lede {
   max-width: 42ch;
   color: var(--text-muted);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   font-size: 1.05rem;
+}
+
+.cmdList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.25rem;
+}
+
+.pageFoot {
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border);
+}
+
+.entry {
+  margin: 0 0 0.55rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+}
+
+.entryLink {
+  margin: 0 0 0.55rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
 }
 
 .timeline {
@@ -287,9 +310,9 @@
 
 .credList li {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.35rem 0.65rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
 }
 
 .credList a {

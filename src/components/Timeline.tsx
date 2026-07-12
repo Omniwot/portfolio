@@ -1,8 +1,16 @@
 import { timeline } from "@/data/site";
+import { slugify } from "@/lib/slug";
 import CommandLine from "./CommandLine";
+import CommandLink from "./CommandLink";
+import PageFoot from "./PageFoot";
 import Reveal from "./Reveal";
 import TypeText from "./TypeText";
 import styles from "./Timeline.module.css";
+
+const footNav = [
+  { command: "cd ./work", to: "/work", label: "Work page" },
+  { command: "ls ~/projects", to: "/projects", label: "Projects page" },
+] as const;
 
 export default function Timeline() {
   return (
@@ -17,10 +25,7 @@ export default function Timeline() {
           <h2 id="timeline-title" className={styles.title}>
             <TypeText text="Path" speed={28} cursor={false} />
           </h2>
-          <p className={styles.hint}>Latest → oldest. Details on other pages.</p>
-          <p className={styles.cmdHint} aria-hidden="true">
-            {">"} tail -f /var/log/career.log
-          </p>
+          <p className={styles.hint}>Latest → oldest. Tap a log line for details.</p>
         </Reveal>
 
         <div className={styles.crt}>
@@ -38,7 +43,13 @@ export default function Timeline() {
                       {i < timeline.length - 1 ? "---->" : "====*"}
                     </span>
                     <div className={styles.copy}>
-                      <p className={styles.label}>{event.label}</p>
+                      <CommandLink
+                        command={`log read --at=${slugify(event.label, 20)}`}
+                        to="/work"
+                        ariaLabel={`${event.label} — ${event.detail}`}
+                        className={styles.timelineCmd}
+                        type={false}
+                      />
                       <p className={styles.detail}>{event.detail}</p>
                     </div>
                   </div>
@@ -46,9 +57,11 @@ export default function Timeline() {
               </li>
             ))}
           </ol>
-          <p className={styles.crtFoot} aria-hidden="true">
-            {">"} # end of stream · cd ./work for details
-          </p>
+          <PageFoot
+            items={footNav}
+            ariaLabel="More pages"
+            className={styles.crtFootNav}
+          />
         </div>
       </div>
     </section>

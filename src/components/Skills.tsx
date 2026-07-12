@@ -1,9 +1,16 @@
 import { useState } from "react";
 import { skillGroups } from "@/data/site";
 import CommandLine from "./CommandLine";
+import PageFoot from "./PageFoot";
 import Reveal from "./Reveal";
 import TypeText from "./TypeText";
 import styles from "./Skills.module.css";
+
+const footNav = [
+  { command: "cd ./work", to: "/work", label: "Work page" },
+  { command: "ls ~/projects", to: "/projects", label: "Projects page" },
+  { command: "ping omniwot", to: "/contact", label: "Contact page" },
+] as const;
 
 export default function Skills() {
   const [ready, setReady] = useState(false);
@@ -50,12 +57,11 @@ export default function Skills() {
             {skillGroups.map((group, gi) => (
               <Reveal key={group.title} delay={ready ? 80 + gi * 90 : 400}>
                 <div className={styles.group}>
-                  <p className={styles.groupCmd}>
-                    <span className={styles.prompt}>{">"}</span>
-                    <span>
-                      cat ./{group.slug}/README.md
-                    </span>
-                  </p>
+                  <CommandLine
+                    command={`cat ./${group.slug}/README.md`}
+                    entry
+                    type={false}
+                  />
                   <div className={styles.groupHead}>
                     <h3 className={styles.groupTitle}>{group.title}</h3>
                     <span className={styles.count}>
@@ -85,6 +91,8 @@ export default function Skills() {
             <span>exit 0</span>
           </div>
         </div>
+
+        <PageFoot items={footNav} ariaLabel="More pages" />
       </div>
     </section>
   );

@@ -44,25 +44,17 @@
   animation: phosphorIn 0.28s linear both;
 }
 
-.easter {
-  margin-top: 0.85rem;
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  color: var(--accent-bright);
-  text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
-  opacity: 0.9;
-  animation: phosphorIn 0.28s linear 0.12s both;
+.cmdList {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  animation: phosphorIn 0.32s linear 0.2s both;
 }
 
-.footerCmd {
-  margin-top: 1.25rem;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  color: rgba(61, 220, 151, 0.75);
-  text-shadow: 0 0 8px rgba(57, 255, 20, 0.25);
-  animation: phosphorIn 0.28s linear 0.28s both;
+.heroCmd {
+  margin: 0 0 0.35rem;
+  font-size: clamp(0.95rem, 2.1vw, 1.08rem);
 }
 
 .brand {
@@ -242,10 +234,9 @@
   .brand,
   .headline,
   .sub,
+  .cmdList,
   .actions,
-  .quick,
-  .easter,
-  .footerCmd {
+  .quick {
     animation: none;
     opacity: 1;
     filter: none;

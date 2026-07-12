@@ -1,8 +1,17 @@
 import { experience } from "@/data/site";
+import { hostFromUrl, slugify } from "@/lib/slug";
 import CommandLine from "./CommandLine";
+import CommandLink from "./CommandLink";
+import PageFoot from "./PageFoot";
 import Reveal from "./Reveal";
 import TypeText from "./TypeText";
 import styles from "./Section.module.css";
+
+const footNav = [
+  { command: "cd ./projects", to: "/projects", label: "Projects page" },
+  { command: "ls ~/skills", to: "/skills", label: "Skills page" },
+  { command: "man education", to: "/education", label: "Education page" },
+] as const;
 
 export default function Experience() {
   return (
@@ -17,48 +26,49 @@ export default function Experience() {
             Roles spanning ML/RAG research, full-stack product work, and cloud
             data platforms.
           </p>
-          <p className={styles.cmdHint} aria-hidden="true">
-            {">"} grep -n &quot;impact&quot; experience.log
-          </p>
         </Reveal>
         <ol className={styles.timeline}>
-          {experience.map((role, i) => (
-            <li key={`${role.company}-${role.title}-${role.duration}`}>
-              <Reveal delay={i * 40}>
-                <article className={styles.role}>
-                  <div className={styles.roleMeta}>
-                    <p className={styles.entryCmd} aria-hidden="true">
-                      {">"} jobctl show --id={i + 1}
-                    </p>
-                    <h3 className={styles.roleTitle}>{role.title}</h3>
-                    <p className={styles.company}>
+          {experience.map((role, i) => {
+            const slug = slugify(role.company);
+            const cmd = role.url
+              ? `curl ${hostFromUrl(role.url)} --role=${slug}`
+              : `jobctl show --id=${i + 1} · ${slug}`;
+
+            return (
+              <li key={`${role.company}-${role.title}-${role.duration}`}>
+                <Reveal delay={i * 40}>
+                  <article className={styles.role}>
+                    <div className={styles.roleMeta}>
                       {role.url ? (
-                        <a href={role.url} target="_blank" rel="noreferrer">
-                          {role.company}
-                        </a>
+                        <CommandLink
+                          command={cmd}
+                          href={role.url}
+                          external
+                          ariaLabel={`${role.company} — ${role.title}`}
+                          className={styles.entryLink}
+                          type={false}
+                        />
                       ) : (
-                        <span>{role.company}</span>
+                        <CommandLine command={cmd} entry type={false} />
                       )}
-                      <span className={styles.dot} aria-hidden="true">
-                        ·
-                      </span>
-                      <span className={styles.location}>{role.location}</span>
-                    </p>
-                    <p className={styles.duration}>{role.duration}</p>
-                  </div>
-                  <ul className={styles.points}>
-                    {role.points.map((p) => (
-                      <li key={p}>{p}</li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            </li>
-          ))}
+                      <h3 className={styles.roleTitle}>{role.title}</h3>
+                      <p className={styles.company}>
+                        <span className={styles.location}>{role.location}</span>
+                      </p>
+                      <p className={styles.duration}>{role.duration}</p>
+                    </div>
+                    <ul className={styles.points}>
+                      {role.points.map((p) => (
+                        <li key={p}>{p}</li>
+                      ))}
+                    </ul>
+                  </article>
+                </Reveal>
+              </li>
+            );
+          })}
         </ol>
-        <p className={styles.cmdHint} aria-hidden="true">
-          {">"} # EOF experience.log · more in ./projects
-        </p>
+        <PageFoot items={footNav} ariaLabel="More pages" />
       </div>
     </section>
   );

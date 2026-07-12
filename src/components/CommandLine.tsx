@@ -6,6 +6,8 @@ type Props = {
   /** Optional muted status line under the command */
   status?: string;
   className?: string;
+  /** Use terminal entry styling (smaller, for list items) */
+  entry?: boolean;
   type?: boolean;
   speed?: number;
   startDelay?: number;
@@ -16,6 +18,7 @@ export default function CommandLine({
   command,
   status,
   className = "",
+  entry = false,
   type = true,
   speed = 12,
   startDelay = 0,
@@ -23,7 +26,10 @@ export default function CommandLine({
 }: Props) {
   return (
     <div className={className}>
-      <p className={styles.line} aria-label={`command ${command}`}>
+      <p
+        className={entry ? styles.entry : styles.line}
+        aria-label={`command ${command}`}
+      >
         <span className={styles.prompt}>{">"}</span>
         {type ? (
           <TypeText

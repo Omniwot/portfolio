@@ -1,9 +1,24 @@
-import { Link } from "react-router-dom";
 import MatrixRain from "./MatrixRain";
 import CommandLine from "./CommandLine";
+import CommandLink from "./CommandLink";
 import TypeText from "./TypeText";
 import { homeLinks, site } from "@/data/site";
 import styles from "./Hero.module.css";
+
+const navCommands = [
+  { command: "ping omniwot --open", to: "/contact", label: "Contact" },
+  { command: "cat ./work/experience.log", to: "/work", label: "Work" },
+  ...homeLinks.map((item) => ({
+    command: `cd ${item.to}`,
+    to: item.to,
+    label: `${item.label} — ${item.blurb}`,
+  })),
+  {
+    command: "cd ./skills && cat README.md",
+    to: "/skills",
+    label: "Skills page",
+  },
+] as const;
 
 export default function Hero() {
   return (
@@ -31,30 +46,26 @@ export default function Hero() {
             cursor={false}
           />
         </p>
-        <p className={styles.easter} aria-hidden="true">
-          {">"} whoami · {site.name.toLowerCase().replace(/\s+/g, "_")}
-        </p>
-        <div className={styles.actions}>
-          <Link className={styles.primary} to="/contact">
-            Contact
-          </Link>
-          <Link className={styles.secondary} to="/work">
-            Work
-          </Link>
-        </div>
-        <ul className={styles.quick}>
-          {homeLinks.map((item) => (
-            <li key={item.to}>
-              <Link to={item.to} className={styles.quickLink}>
-                <span className={styles.quickLabel}>{item.label}</span>
-                <span className={styles.quickBlurb}>{item.blurb}</span>
-              </Link>
-            </li>
+        <CommandLink
+          command={`whoami · ${site.name.toLowerCase().replace(/\s+/g, "_")}`}
+          to="/contact"
+          ariaLabel={`About ${site.name}`}
+          className={styles.heroCmd}
+          startDelay={900}
+        />
+
+        <nav className={styles.cmdList} aria-label="Site navigation">
+          {navCommands.map((item, i) => (
+            <CommandLink
+              key={item.command}
+              command={item.command}
+              to={item.to}
+              ariaLabel={item.label}
+              className={styles.heroCmd}
+              startDelay={1000 + i * 80}
+            />
           ))}
-        </ul>
-        <p className={styles.footerCmd} aria-hidden="true">
-          {">"} hint: cd ./skills && cat README.md
-        </p>
+        </nav>
       </div>
     </section>
   );

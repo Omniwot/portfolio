@@ -3,7 +3,7 @@ import CommandLine from "./CommandLine";
 import CommandLink from "./CommandLink";
 import Reveal from "./Reveal";
 import TypeText from "./TypeText";
-import styles from "./Contact.module.css";
+import styles from "./Section.module.css";
 
 const channels = [
   {

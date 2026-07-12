@@ -77,6 +77,12 @@
   text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
 }
 
+.crtFootNav {
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed var(--border);
+}
+
 .track {
   list-style: none;
   margin: 0;
@@ -111,11 +117,9 @@
   min-width: 0;
 }
 
-.label {
-  color: var(--text);
-  letter-spacing: 0.03em;
-  font-size: clamp(1.05rem, 2.4vw, 1.15rem);
-  overflow-wrap: anywhere;
+.timelineCmd {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
 }
 
 .detail {
