@@ -35,3 +35,36 @@
   color: rgba(61, 220, 151, 0.65);
 }
 
+.link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.45rem;
+  margin: 0 0 0.85rem;
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: var(--accent-bright);
+  text-decoration: none;
+  text-shadow:
+    0 0 10px rgba(57, 255, 20, 0.55),
+    0 0 28px rgba(57, 255, 20, 0.25);
+  transition: none;
+  overflow-wrap: anywhere;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--accent-bright);
+  filter: brightness(1.2);
+  text-shadow:
+    0 0 14px rgba(57, 255, 20, 0.75),
+    0 0 32px rgba(57, 255, 20, 0.4);
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+

@@ -1,8 +1,39 @@
 import { site } from "@/data/site";
 import CommandLine from "./CommandLine";
+import CommandLink from "./CommandLink";
 import Reveal from "./Reveal";
 import TypeText from "./TypeText";
-import styles from "./Section.module.css";
+import styles from "./Contact.module.css";
+
+const channels = [
+  {
+    command: `mailx -s "hello" ${site.email}`,
+    href: `mailto:${site.email}`,
+    label: `Email ${site.name}`,
+  },
+  {
+    command: "curl linkedin.com/in/harshal-a-omni --follow",
+    href: site.links.linkedin,
+    external: true,
+    label: "LinkedIn profile",
+  },
+  {
+    command: "open github.com/Omniwot --repo",
+    href: site.links.github,
+    external: true,
+    label: "GitHub profile",
+  },
+  {
+    command: "cd ./work",
+    to: "/work",
+    label: "Work page",
+  },
+  {
+    command: "ls ~/projects",
+    to: "/projects",
+    label: "Projects page",
+  },
+] as const;
 
 export default function Contact() {
   return (
@@ -21,30 +52,22 @@ export default function Contact() {
             Open to roles in agentic systems, RAG, and forward-deployed AI —
             based in {site.location}.
           </p>
-          <p className={styles.cmdHint} aria-hidden="true">
-            {">"} mailx -s &quot;hello&quot; {site.email}
-          </p>
-          <div className={styles.contactLinks}>
-            <a className={styles.primaryLink} href={`mailto:${site.email}`}>
-              {site.email}
-            </a>
-            <div className={styles.socialRow}>
-              <a
-                href={site.links.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-              <a href={site.links.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            </div>
-          </div>
-          <p className={styles.cmdHint} aria-hidden="true">
-            {">"} ssh omniwot@matrix · connection ready
-          </p>
         </Reveal>
+
+        <nav className={styles.cmdList} aria-label="Contact and profile links">
+          {channels.map((ch, i) => (
+            <Reveal key={ch.command} delay={i * 55}>
+              <CommandLink
+                command={ch.command}
+                href={"href" in ch ? ch.href : undefined}
+                to={"to" in ch ? ch.to : undefined}
+                external={"external" in ch ? ch.external : undefined}
+                ariaLabel={ch.label}
+                startDelay={i * 120}
+              />
+            </Reveal>
+          ))}
+        </nav>
       </div>
     </section>
   );
