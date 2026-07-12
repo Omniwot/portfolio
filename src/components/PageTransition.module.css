@@ -21,10 +21,12 @@
   position: fixed;
   inset: var(--header-h) 0 0 0;
   z-index: 40;
-  display: grid;
-  place-items: center;
-  background: #070b0a;
-  animation: terminalFade 0.15s ease-out both;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.25rem var(--space);
+  background: rgba(7, 11, 10, 0.94);
+  animation: terminalFade 0.12s ease-out both;
 }
 
 .scan {
@@ -33,43 +35,76 @@
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(57, 255, 20, 0.14) 48%,
+    rgba(57, 255, 20, 0.1) 48%,
     transparent 52%
   );
   background-size: 100% 220%;
-  animation: scanMove 0.38s linear both;
+  animation: scanMove 0.45s linear both;
   pointer-events: none;
 }
 
-.glyphs {
+.term {
   position: relative;
   z-index: 1;
-  margin: 0;
-  max-width: min(92vw, 36rem);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: clip;
+  width: min(100%, 38rem);
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(rgba(57, 255, 20, 0.025) 50%, transparent 50%),
+    var(--bg-elevated);
+  background-size: 100% 3px, auto;
+  box-shadow:
+    inset 0 0 32px rgba(57, 255, 20, 0.04),
+    0 0 24px rgba(57, 255, 20, 0.06);
+}
+
+.termBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.55rem 0.85rem;
   font-family: var(--font-mono);
-  font-size: clamp(1rem, 3.5vw, 1.35rem);
-  letter-spacing: 0.12em;
-  color: #39ff14;
-  text-shadow: 0 0 14px rgba(57, 255, 20, 0.55);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: rgba(61, 220, 151, 0.75);
+  border-bottom: 1px dashed var(--border);
+}
+
+.termBody {
+  padding: 0.85rem 0.85rem 1rem;
+}
+
+.cmdLine {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  letter-spacing: 0.04em;
+  color: var(--accent-bright);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.45);
+  overflow-wrap: anywhere;
 }
 
 .prompt {
-  position: relative;
-  z-index: 1;
-  margin: 0.85rem 0 0;
-  max-width: min(92vw, 36rem);
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.cursor {
+  animation: blink 0.75s step-end infinite;
+  color: var(--accent-bright);
+}
+
+.status {
+  margin: 0.65rem 0 0;
   font-family: var(--font-mono);
-  font-size: clamp(1.05rem, 3vw, 1.35rem);
-  letter-spacing: 0.06em;
-  color: #39ff14;
-  text-shadow:
-    0 0 12px rgba(57, 255, 20, 0.7),
-    0 0 28px rgba(57, 255, 20, 0.35);
-  text-align: center;
-  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: rgba(61, 220, 151, 0.85);
+  animation: terminalFade 0.15s ease-out both;
 }
 
 @keyframes terminalFade {
@@ -90,13 +125,19 @@
   }
 }
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .page,
   .enter,
   .wipe,
   .scan,
-  .glyphs,
-  .prompt {
+  .term,
+  .status {
     animation: none;
     transition: none;
     opacity: 1;
@@ -104,5 +145,15 @@
 
   .hidden {
     opacity: 1;
+  }
+
+  .cursor {
+    animation: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .termBar span:last-child {
+    display: none;
   }
 }
