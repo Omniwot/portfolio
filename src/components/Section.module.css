@@ -11,14 +11,14 @@
 
 .kicker {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
   color: var(--accent);
   margin-bottom: 0.65rem;
 }
 
 .title {
-  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent-bright);
@@ -29,6 +29,7 @@
   max-width: 42ch;
   color: var(--text-muted);
   margin-bottom: 1.75rem;
+  font-size: 1.05rem;
 }
 
 .timeline {
@@ -81,7 +82,7 @@
 .duration {
   margin-top: 0.45rem;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   color: var(--accent);
   letter-spacing: 0.02em;
 }
@@ -90,6 +91,7 @@
   margin: 0;
   padding-left: 1.1rem;
   color: var(--text-muted);
+  font-size: 1.02rem;
 }
 
 .points li {
@@ -149,12 +151,12 @@
 
 .tags li {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.78rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-muted);
   border: 1px solid var(--border);
-  padding: 0.2rem 0.4rem;
+  padding: 0.25rem 0.45rem;
   border-radius: 3px;
 }
 
@@ -246,7 +248,7 @@
 
 .credsTitle {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -283,7 +285,7 @@
 
 .credOrg {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
@@ -313,7 +315,7 @@
   flex-wrap: wrap;
   gap: 0.85rem 1.25rem;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }

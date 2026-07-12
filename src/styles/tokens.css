@@ -57,7 +57,7 @@ body {
   background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 0.9rem + 0.35vw, 1.05rem);
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.1rem);
   line-height: 1.55;
   letter-spacing: 0.02em;
   -webkit-font-smoothing: antialiased;
