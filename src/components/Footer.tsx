@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <span className={styles.brand}>{site.brand}</span>
         <span className={styles.cmd} aria-hidden="true">
-          {">"} logout && clear
+          {">"} logout --session=portfolio · exit 0
         </span>
         <span className={styles.copy}>
           © {new Date().getFullYear()} {site.name}

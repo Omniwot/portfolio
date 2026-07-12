@@ -1,0 +1,37 @@
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.45rem;
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: var(--accent-bright);
+  text-shadow:
+    0 0 10px rgba(57, 255, 20, 0.55),
+    0 0 28px rgba(57, 255, 20, 0.25);
+}
+
+.prompt {
+  flex-shrink: 0;
+  color: var(--accent-bright);
+  font-weight: 700;
+  opacity: 1;
+}
+
+.cmd {
+  color: var(--accent-bright);
+  overflow-wrap: anywhere;
+}
+
+.hint {
+  width: 100%;
+  margin: -0.35rem 0 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: rgba(61, 220, 151, 0.65);
+}
+

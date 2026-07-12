@@ -9,17 +9,11 @@
 }
 
 .kicker {
-  color: var(--accent);
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  margin-top: 0.75rem;
-  margin-bottom: 0.4rem;
-}
-
-.crtCmd {
   color: var(--accent-bright);
-  text-shadow: 0 0 8px rgba(57, 255, 20, 0.45);
-  letter-spacing: 0.1em;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.45);
 }
 
 .title {
@@ -33,7 +27,16 @@
 .hint {
   color: var(--text-muted);
   font-size: 1rem;
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.55rem;
+}
+
+.cmdHint {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-bright);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
 }
 
 .crt {
@@ -53,13 +56,25 @@
   display: flex;
   justify-content: space-between;
   gap: 0.75rem;
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--accent-bright);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.35);
   border-bottom: 1px dashed var(--border);
   padding-bottom: 0.55rem;
   margin-bottom: 0.85rem;
+}
+
+.crtFoot {
+  margin: 0.85rem 0 0;
+  padding-top: 0.65rem;
+  border-top: 1px dashed var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-bright);
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
 }
 
 .track {

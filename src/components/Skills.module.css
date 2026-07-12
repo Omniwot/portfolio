@@ -1,121 +1,155 @@
-.terminal {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+.section {
+  padding: clamp(2rem, 6vw, 5rem) 0;
+  border-top: 1px solid var(--border);
 }
 
-.headerBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--space);
 }
 
-.inlineCaret {
-  display: inline-block;
-  width: 0.5em;
-  height: 1em;
-  margin-left: 0.15rem;
-  vertical-align: text-bottom;
-  background: var(--accent-bright);
-  box-shadow: 0 0 8px rgba(57, 255, 20, 0.75);
-  animation: blink 0.85s steps(1) infinite;
-}
-
-.inlineCmd {
-  font-family: var(--font-mono);
+.title {
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--accent-bright);
-  background: rgba(57, 255, 20, 0.1);
-  border: 1px solid rgba(57, 255, 20, 0.3);
-  border-radius: 3px;
-  padding: 0.05rem 0.35rem;
-  font-size: 0.9em;
+  margin: 0 0 0.55rem;
+  min-height: 1.2em;
 }
 
-.ghost {
-  opacity: 0.35;
+.titleGhost {
+  opacity: 0;
 }
 
-.groupEnter {
-  animation: groupIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+.lede {
+  max-width: 48ch;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  min-height: 1.55em;
+}
+
+.term {
+  border: 2px solid var(--border);
+  background:
+    linear-gradient(rgba(57, 255, 20, 0.03) 50%, transparent 50%),
+    var(--bg-elevated);
+  background-size: 100% 3px, auto;
+  box-shadow:
+    inset 0 0 48px rgba(57, 255, 20, 0.05),
+    0 0 0 1px rgba(57, 255, 20, 0.1),
+    0 0 32px rgba(57, 255, 20, 0.06);
+  overflow: hidden;
+}
+
+.termBar,
+.termFoot {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.65rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(61, 220, 151, 0.75);
+  border-bottom: 1px dashed var(--border);
+}
+
+.termFoot {
+  border-bottom: none;
+  border-top: 1px dashed var(--border);
+  color: var(--accent-bright);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.35);
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
+.termBody {
+  padding: 0.85rem 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
 }
 
 .groupCmd {
   margin: 0 0 0.45rem;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  letter-spacing: 0.04em;
   color: var(--accent-bright);
-  text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
-  opacity: 0.95;
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.45);
 }
 
-.groupGt {
-  color: var(--accent);
-  margin-right: 0.35rem;
+.prompt {
+  margin-right: 0.4rem;
+  font-weight: 700;
 }
 
-.chipRow {
+.groupHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
+.groupTitle {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(61, 220, 151, 0.7);
+}
+
+.chips {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .chip {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   letter-spacing: 0.03em;
   color: var(--text);
-  background: rgba(57, 255, 20, 0.06);
   border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 0.28rem 0.55rem;
-  animation: chipIn 0.2s ease both;
+  background: rgba(57, 255, 20, 0.04);
+  padding: 0.4rem 0.65rem;
+  border-radius: 2px;
+  opacity: 0;
+  animation: chipIn 0.28s ease forwards;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
 }
 
 .chip:hover {
-  border-color: rgba(57, 255, 20, 0.55);
   color: var(--accent-bright);
-  box-shadow: 0 0 10px rgba(57, 255, 20, 0.15);
-}
-
-.footerCmds {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin-top: 0.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px dashed var(--border);
-}
-
-@keyframes blink {
-  0%,
-  49% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes groupIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+  border-color: rgba(57, 255, 20, 0.55);
+  background: rgba(57, 255, 20, 0.1);
+  box-shadow: 0 0 14px rgba(57, 255, 20, 0.2);
 }
 
 @keyframes chipIn {
   from {
     opacity: 0;
-    transform: scale(0.92);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
@@ -123,14 +157,16 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .inlineCaret {
-    animation: none;
-    opacity: 0.65;
+@media (max-width: 520px) {
+  .termBar span:last-child,
+  .termFoot span:last-child {
+    display: none;
   }
+}
 
-  .groupEnter,
+@media (prefers-reduced-motion: reduce) {
   .chip {
+    opacity: 1;
     animation: none;
   }
 }

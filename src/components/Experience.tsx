@@ -1,35 +1,35 @@
 import { experience } from "@/data/site";
-import CmdPrompt from "./CmdPrompt";
+import CommandLine from "./CommandLine";
 import Reveal from "./Reveal";
+import TypeText from "./TypeText";
 import styles from "./Section.module.css";
 
 export default function Experience() {
   return (
     <section id="work" className={styles.section} aria-labelledby="work-title">
       <div className={styles.inner}>
+        <CommandLine command="cat ./experience.log | head -n 40" speed={11} />
         <Reveal>
-          <CmdPrompt size="sm" caret={false}>
-            cd ./work && history
-          </CmdPrompt>
-          <p className={styles.kicker}>// experience</p>
           <h2 id="work-title" className={styles.title}>
-            Work
+            <TypeText text="Work" speed={24} cursor={false} />
           </h2>
           <p className={styles.lede}>
             Roles spanning ML/RAG research, full-stack product work, and cloud
             data platforms.
           </p>
-          <p className={styles.cmdAside} aria-hidden="true">
-            <span className={styles.cmdAsideText}>{">"} ssh work@theorem</span>
-            <span className={styles.cmdAsideText}>{">"} git log --oneline -n 7</span>
+          <p className={styles.cmdHint} aria-hidden="true">
+            {">"} grep -n &quot;impact&quot; experience.log
           </p>
         </Reveal>
         <ol className={styles.timeline}>
-          {experience.map((role) => (
+          {experience.map((role, i) => (
             <li key={`${role.company}-${role.title}-${role.duration}`}>
-              <Reveal>
+              <Reveal delay={i * 40}>
                 <article className={styles.role}>
                   <div className={styles.roleMeta}>
+                    <p className={styles.entryCmd} aria-hidden="true">
+                      {">"} jobctl show --id={i + 1}
+                    </p>
                     <h3 className={styles.roleTitle}>{role.title}</h3>
                     <p className={styles.company}>
                       {role.url ? (
@@ -56,6 +56,9 @@ export default function Experience() {
             </li>
           ))}
         </ol>
+        <p className={styles.cmdHint} aria-hidden="true">
+          {">"} # EOF experience.log · more in ./projects
+        </p>
       </div>
     </section>
   );

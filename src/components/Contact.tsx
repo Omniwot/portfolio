@@ -1,6 +1,7 @@
 import { site } from "@/data/site";
-import CmdPrompt from "./CmdPrompt";
+import CommandLine from "./CommandLine";
 import Reveal from "./Reveal";
+import TypeText from "./TypeText";
 import styles from "./Section.module.css";
 
 export default function Contact() {
@@ -11,21 +12,17 @@ export default function Contact() {
       aria-labelledby="contact-title"
     >
       <div className={styles.inner}>
+        <CommandLine command="ping omniwot --open --ttl=forever" speed={11} />
         <Reveal>
-          <CmdPrompt size="sm" caret={false}>
-            ping contact --ttl=∞
-          </CmdPrompt>
-          <p className={styles.kicker}>// connect</p>
           <h2 id="contact-title" className={styles.title}>
-            Contact
+            <TypeText text="Contact" speed={22} cursor={false} />
           </h2>
           <p className={styles.lede}>
             Open to roles in agentic systems, RAG, and forward-deployed AI —
             based in {site.location}.
           </p>
-          <p className={styles.cmdAside} aria-hidden="true">
-            <span className={styles.cmdAsideText}>{">"} whoami</span>
-            <span className={styles.cmdAsideText}>{">"} make deploy</span>
+          <p className={styles.cmdHint} aria-hidden="true">
+            {">"} mailx -s &quot;hello&quot; {site.email}
           </p>
           <div className={styles.contactLinks}>
             <a className={styles.primaryLink} href={`mailto:${site.email}`}>
@@ -44,6 +41,9 @@ export default function Contact() {
               </a>
             </div>
           </div>
+          <p className={styles.cmdHint} aria-hidden="true">
+            {">"} ssh omniwot@matrix · connection ready
+          </p>
         </Reveal>
       </div>
     </section>

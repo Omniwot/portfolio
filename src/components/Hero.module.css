@@ -35,8 +35,38 @@
   padding: clamp(1.5rem, 4vw, 2.5rem) var(--space) clamp(1.5rem, 4vw, 2rem);
 }
 
+.prompt {
+  margin: 0 0 0.75rem;
+  color: var(--accent-bright);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.45);
+  animation: rise 0.7s ease both;
+}
+
+.easter {
+  margin-top: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-bright);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+  opacity: 0.9;
+  animation: rise 0.8s ease 0.15s both;
+}
+
+.footerCmd {
+  margin-top: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: rgba(61, 220, 151, 0.75);
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.25);
+  animation: rise 0.8s ease 0.35s both;
+}
+
 .brand {
-  margin: 0.85rem 0 0.75rem;
+  margin: 0 0 0.75rem;
   font-size: clamp(1.85rem, 6vw, 3.25rem);
   line-height: 1.1;
   letter-spacing: 0.06em;
@@ -61,42 +91,6 @@
   color: var(--text-muted);
   letter-spacing: 0.03em;
   animation: rise 0.8s ease 0.12s both;
-}
-
-.decoy {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.5rem 1rem;
-  margin-top: 0.85rem;
-  animation: rise 0.8s ease 0.14s both;
-}
-
-.decoyRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem 1rem;
-  margin-top: 1.5rem;
-  animation: rise 0.8s ease 0.28s both;
-}
-
-.decoyCmd {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  color: var(--accent-bright);
-  text-shadow: 0 0 10px rgba(57, 255, 20, 0.45);
-  background: rgba(57, 255, 20, 0.08);
-  border: 1px solid rgba(57, 255, 20, 0.32);
-  border-radius: 3px;
-  padding: 0.2rem 0.5rem;
-}
-
-.decoyOut {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
 }
 
 .actions {

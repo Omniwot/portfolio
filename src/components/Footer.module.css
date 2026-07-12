@@ -23,14 +23,10 @@
 
 .cmd {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
   color: var(--accent-bright);
-  text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
-  background: rgba(57, 255, 20, 0.08);
-  border: 1px solid rgba(57, 255, 20, 0.3);
-  border-radius: 3px;
-  padding: 0.2rem 0.5rem;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
 }
 
 .copy {
@@ -39,7 +35,12 @@
   color: var(--text-muted);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  .cmd {
+    order: 3;
+    width: 100%;
+  }
+
   .inner {
     flex-direction: column;
     align-items: flex-start;

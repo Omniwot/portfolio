@@ -1,11 +1,18 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useLocation } from "react-router-dom";
-import { commandForPath } from "@/data/commands";
-import CmdPrompt from "./CmdPrompt";
 import styles from "./PageTransition.module.css";
 
 const KATAKANA =
   "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ";
+
+const ROUTE_CMD: Record<string, string> = {
+  "/": "route_swap --to=home --fast",
+  "/work": "route_swap --to=work --load=experience.log",
+  "/projects": "route_swap --to=projects --ls",
+  "/skills": "route_swap --to=skills --tree",
+  "/education": "route_swap --to=education --man",
+  "/contact": "route_swap --to=contact --open",
+};
 
 type Props = {
   children: ReactNode;
@@ -15,7 +22,7 @@ export default function PageTransition({ children }: Props) {
   const location = useLocation();
   const [phase, setPhase] = useState<"idle" | "wipe" | "enter">("idle");
   const [glyphs, setGlyphs] = useState("::::::::");
-  const [cmd, setCmd] = useState(() => commandForPath(location.pathname));
+  const [cmd, setCmd] = useState("route_swap");
   const first = useRef(true);
   const prevPath = useRef(location.pathname);
 
@@ -33,7 +40,7 @@ export default function PageTransition({ children }: Props) {
       return;
     }
 
-    setCmd(commandForPath(location.pathname));
+    setCmd(ROUTE_CMD[location.pathname] ?? `route_swap --to=${location.pathname}`);
     setPhase("wipe");
     const scramble = window.setInterval(() => {
       setGlyphs(
@@ -71,12 +78,9 @@ export default function PageTransition({ children }: Props) {
         <div className={styles.wipe} aria-hidden="true">
           <div className={styles.scan} />
           <p className={styles.glyphs}>{glyphs}</p>
-          <div className={styles.cmdWrap}>
-            <CmdPrompt size="lg" caret>
-              {cmd}
-            </CmdPrompt>
-            <p className={styles.routeHint}>route_swap · {location.pathname}</p>
-          </div>
+          <p className={styles.prompt}>
+            {">"} {cmd}
+          </p>
         </div>
       )}
     </div>
