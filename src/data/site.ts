@@ -23,6 +23,7 @@ export type Credential = {
 export type TimelineEvent = {
   year: string;
   label: string;
+  location: string;
   detail: string;
 };
 
@@ -52,36 +53,43 @@ export const timeline: TimelineEvent[] = [
   {
     year: "2025",
     label: "Theorem Labs",
+    location: "Charlotte, NC",
     detail: "Forward Deployed Engineering",
   },
   {
     year: "2025",
     label: "Creatorain",
+    location: "Champaign, IL / Remote",
     detail: "Cofounder, Data Lead · iVenture / createX",
   },
   {
     year: "2024",
     label: "Very Sweet Inc.",
+    location: "Remote",
     detail: "AI Engineer · agentic OCR",
   },
   {
     year: "2024",
     label: "BIG, UIUC",
+    location: "Champaign, IL",
     detail: "Project Manager · Graph RAG chatbot",
   },
   {
     year: "2024",
     label: "BayInfotech",
+    location: "Livermore, CA",
     detail: "AI Software Engineer · RAG",
   },
   {
     year: "2022",
     label: "Cisco Systems",
+    location: "Bangalore, India",
     detail: "SWE Intern · full-stack",
   },
   {
     year: "2022",
     label: "Zeeve Inc.",
+    location: "Remote",
     detail: "Full Stack · GitHub Externship",
   },
 ];
