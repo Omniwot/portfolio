@@ -2,6 +2,7 @@ import MatrixRain from "./MatrixRain";
 import CommandLine from "./CommandLine";
 import CommandLink from "./CommandLink";
 import TypeText from "./TypeText";
+import { useBootReady } from "@/context/BootReadyContext";
 import { homeLinks, site } from "@/data/site";
 import styles from "./Hero.module.css";
 
@@ -27,20 +28,33 @@ const navCommands = [
 ];
 
 export default function Hero() {
+  const ready = useBootReady();
+
   return (
     <section className={styles.hero} aria-label="Introduction">
       <MatrixRain />
       <div className={styles.wash} aria-hidden="true" />
       <div className={styles.inner}>
-        <CommandLine command="boot --identity --quiet" speed={10} />
+        <CommandLine
+          command="boot --identity --quiet"
+          speed={10}
+          active={ready}
+        />
         <p className={styles.brand}>
-          <TypeText text={site.brand} speed={22} startDelay={220} cursor={false} />
+          <TypeText
+            text={site.brand}
+            speed={22}
+            startDelay={220}
+            active={ready}
+            cursor={false}
+          />
         </p>
         <h1 className={styles.headline}>
           <TypeText
             text={site.headline}
             speed={10}
             startDelay={420}
+            active={ready}
             cursor={false}
           />
         </h1>
@@ -49,6 +63,7 @@ export default function Hero() {
             text={site.subline}
             speed={9}
             startDelay={720}
+            active={ready}
             cursor={false}
           />
         </p>
@@ -58,6 +73,7 @@ export default function Hero() {
           ariaLabel={`About ${site.name}`}
           className={styles.heroCmd}
           startDelay={900}
+          active={ready}
         />
 
         <nav className={styles.cmdList} aria-label="Site navigation">
@@ -69,6 +85,7 @@ export default function Hero() {
               ariaLabel={item.label}
               className={styles.heroCmd}
               startDelay={1000 + i * 80}
+              active={ready}
             />
           ))}
         </nav>

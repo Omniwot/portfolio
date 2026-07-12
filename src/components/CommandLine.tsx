@@ -11,6 +11,7 @@ type Props = {
   type?: boolean;
   speed?: number;
   startDelay?: number;
+  active?: boolean;
   onDone?: () => void;
 };
 
@@ -22,6 +23,7 @@ export default function CommandLine({
   type = true,
   speed = 12,
   startDelay = 0,
+  active = true,
   onDone,
 }: Props) {
   return (
@@ -36,6 +38,7 @@ export default function CommandLine({
             text={command}
             speed={speed}
             startDelay={startDelay}
+            active={active}
             className={styles.cmd}
             onDone={onDone}
           />

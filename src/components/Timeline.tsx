@@ -5,6 +5,7 @@ import CommandLink from "./CommandLink";
 import PageFoot from "./PageFoot";
 import Reveal from "./Reveal";
 import TypeText from "./TypeText";
+import { useBootReady } from "@/context/BootReadyContext";
 import styles from "./Timeline.module.css";
 
 const footNav = [
@@ -13,6 +14,8 @@ const footNav = [
 ] as const;
 
 export default function Timeline() {
+  const ready = useBootReady();
+
   return (
     <section
       id="timeline"
@@ -20,10 +23,19 @@ export default function Timeline() {
       aria-labelledby="timeline-title"
     >
       <div className={styles.inner}>
-        <CommandLine command="history --timeline --reverse" speed={11} />
+        <CommandLine
+          command="history --timeline --reverse"
+          speed={11}
+          active={ready}
+        />
         <Reveal>
           <h2 id="timeline-title" className={styles.title}>
-            <TypeText text="Path" speed={28} cursor={false} />
+            <TypeText
+              text="Path"
+              speed={28}
+              active={ready}
+              cursor={false}
+            />
           </h2>
           <p className={styles.hint}>Latest → oldest. Tap a log line for details.</p>
         </Reveal>

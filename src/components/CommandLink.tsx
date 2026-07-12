@@ -11,6 +11,7 @@ type Props = {
   type?: boolean;
   speed?: number;
   startDelay?: number;
+  active?: boolean;
   ariaLabel?: string;
 };
 
@@ -23,6 +24,7 @@ export default function CommandLink({
   type = true,
   speed = 12,
   startDelay = 0,
+  active = true,
   ariaLabel,
 }: Props) {
   const body = (
@@ -35,6 +37,7 @@ export default function CommandLink({
           text={command}
           speed={speed}
           startDelay={startDelay}
+          active={active}
           className={styles.cmd}
           cursor={false}
         />

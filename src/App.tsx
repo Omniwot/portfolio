@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import MatrixLoader from "./components/MatrixLoader";
+import { BootReadyContext } from "./context/BootReadyContext";
 import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
 import WorkPage from "./pages/WorkPage";
@@ -22,17 +23,19 @@ export default function App() {
         aria-hidden={!ready}
       >
         <HashRouter>
-          <Routes>
-            <Route element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="work" element={<WorkPage />} />
-              <Route path="projects" element={<ProjectsPage />} />
-              <Route path="skills" element={<SkillsPage />} />
-              <Route path="education" element={<EducationPage />} />
-              <Route path="contact" element={<ContactPage />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Route>
-          </Routes>
+          <BootReadyContext.Provider value={ready}>
+            <Routes>
+              <Route element={<Layout />}>
+                <Route index element={<HomePage />} />
+                <Route path="work" element={<WorkPage />} />
+                <Route path="projects" element={<ProjectsPage />} />
+                <Route path="skills" element={<SkillsPage />} />
+                <Route path="education" element={<EducationPage />} />
+                <Route path="contact" element={<ContactPage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Route>
+            </Routes>
+          </BootReadyContext.Provider>
         </HashRouter>
       </div>
     </>

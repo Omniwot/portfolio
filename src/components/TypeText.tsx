@@ -8,6 +8,8 @@ type Props = {
   className?: string;
   cursor?: boolean;
   startDelay?: number;
+  /** When false, typing is paused (e.g. during intro loader) */
+  active?: boolean;
   onDone?: () => void;
   as?: "span" | "p" | "h1" | "h2" | "h3";
 };
@@ -18,16 +20,24 @@ export default function TypeText({
   className = "",
   cursor = true,
   startDelay = 0,
+  active = true,
   onDone,
   as: Tag = "span",
 }: Props) {
   const [shown, setShown] = useState("");
   const [done, setDone] = useState(false);
-  const [started, setStarted] = useState(startDelay === 0);
+  const [started, setStarted] = useState(false);
   const onDoneRef = useRef(onDone);
   onDoneRef.current = onDone;
 
   useEffect(() => {
+    if (!active) {
+      setShown("");
+      setDone(false);
+      setStarted(false);
+      return;
+    }
+
     setShown("");
     setDone(false);
     setStarted(startDelay === 0);
@@ -67,12 +77,12 @@ export default function TypeText({
       if (tick) window.clearInterval(tick);
       if (delayTimer) window.clearTimeout(delayTimer);
     };
-  }, [text, speed, startDelay]);
+  }, [text, speed, startDelay, active]);
 
   return (
     <Tag className={className}>
       {shown}
-      {cursor && started && !done && (
+      {cursor && active && started && !done && (
         <span className={styles.cursor} aria-hidden="true">
           ▍
         </span>
