@@ -5,20 +5,26 @@ import TypeText from "./TypeText";
 import { homeLinks, site } from "@/data/site";
 import styles from "./Hero.module.css";
 
+const routeCommand: Record<string, string> = {
+  "/work": "cat ./work/experience.log",
+  "/projects": "ls ~/projects",
+  "/skills": "ls ~/skills --tree",
+  "/contact": "ping omniwot --open",
+  "/education": "man credentials | less",
+};
+
 const navCommands = [
-  { command: "ping omniwot --open", to: "/contact", label: "Contact" },
-  { command: "cat ./work/experience.log", to: "/work", label: "Work" },
   ...homeLinks.map((item) => ({
-    command: `cd ${item.to}`,
+    command: routeCommand[item.to] ?? `cd ${item.to}`,
     to: item.to,
     label: `${item.label} — ${item.blurb}`,
   })),
   {
-    command: "cd ./skills && cat README.md",
-    to: "/skills",
-    label: "Skills page",
+    command: routeCommand["/education"],
+    to: "/education",
+    label: "Education — Degrees & certs",
   },
-] as const;
+];
 
 export default function Hero() {
   return (
@@ -57,7 +63,7 @@ export default function Hero() {
         <nav className={styles.cmdList} aria-label="Site navigation">
           {navCommands.map((item, i) => (
             <CommandLink
-              key={item.command}
+              key={item.to}
               command={item.command}
               to={item.to}
               ariaLabel={item.label}
