@@ -39,6 +39,13 @@ export default function Experience() {
                 <Reveal delay={i * 40}>
                   <article className={styles.role}>
                     <div className={styles.roleMeta}>
+                      <p className={styles.org}>
+                        <span className={styles.orgLocation}>{role.location}</span>
+                        <span className={styles.orgSep} aria-hidden="true">
+                          ·
+                        </span>
+                        <span>{role.company}</span>
+                      </p>
                       {role.url ? (
                         <CommandLink
                           command={cmd}
@@ -52,9 +59,6 @@ export default function Experience() {
                         <CommandLine command={cmd} entry type={false} />
                       )}
                       <h3 className={styles.roleTitle}>{role.title}</h3>
-                      <p className={styles.company}>
-                        <span className={styles.location}>{role.location}</span>
-                      </p>
                       <p className={styles.duration}>{role.duration}</p>
                     </div>
                     <ul className={styles.points}>
