@@ -29,10 +29,10 @@ const ROUTE_META: Record<string, { cmd: string; status: string }> = {
   },
 };
 
-const MS_PER_CHAR = 14;
-const PAUSE_BEFORE_STATUS = 120;
-const STATUS_DWELL = 340;
-const FADE_OUT = 300;
+const MS_PER_CHAR = 18;
+const PAUSE_BEFORE_STATUS = 160;
+const STATUS_DWELL = 420;
+const FADE_OUT = 320;
 
 type Props = {
   children: ReactNode;
