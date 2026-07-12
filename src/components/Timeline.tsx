@@ -1,4 +1,5 @@
 import { timeline } from "@/data/site";
+import CmdPrompt from "./CmdPrompt";
 import Reveal from "./Reveal";
 import styles from "./Timeline.module.css";
 
@@ -11,6 +12,9 @@ export default function Timeline() {
     >
       <div className={styles.inner}>
         <Reveal>
+          <CmdPrompt size="sm" caret={false}>
+            tail -f SYS.LOG
+          </CmdPrompt>
           <p className={styles.kicker}>// timeline</p>
           <h2 id="timeline-title" className={styles.title}>
             Path
@@ -21,6 +25,7 @@ export default function Timeline() {
         <div className={styles.crt}>
           <div className={styles.crtTop} aria-hidden="true">
             <span>SYS.LOG</span>
+            <span className={styles.crtCmd}>{">"} route_swap</span>
             <span>SCROLL_OK</span>
           </div>
           <ol className={styles.track}>

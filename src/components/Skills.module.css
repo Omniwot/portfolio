@@ -1,0 +1,136 @@
+.terminal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.inlineCaret {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 0.15rem;
+  vertical-align: text-bottom;
+  background: var(--accent-bright);
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.75);
+  animation: blink 0.85s steps(1) infinite;
+}
+
+.inlineCmd {
+  font-family: var(--font-mono);
+  color: var(--accent-bright);
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  border-radius: 3px;
+  padding: 0.05rem 0.35rem;
+  font-size: 0.9em;
+}
+
+.ghost {
+  opacity: 0.35;
+}
+
+.groupEnter {
+  animation: groupIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.groupCmd {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-bright);
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+  opacity: 0.95;
+}
+
+.groupGt {
+  color: var(--accent);
+  margin-right: 0.35rem;
+}
+
+.chipRow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--text);
+  background: rgba(57, 255, 20, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.28rem 0.55rem;
+  animation: chipIn 0.2s ease both;
+}
+
+.chip:hover {
+  border-color: rgba(57, 255, 20, 0.55);
+  color: var(--accent-bright);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.15);
+}
+
+.footerCmds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border);
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes groupIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes chipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inlineCaret {
+    animation: none;
+    opacity: 0.65;
+  }
+
+  .groupEnter,
+  .chip {
+    animation: none;
+  }
+}

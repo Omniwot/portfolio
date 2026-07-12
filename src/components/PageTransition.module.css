@@ -69,6 +69,25 @@
   text-shadow: 0 0 14px rgba(57, 255, 20, 0.55);
 }
 
+.cmdWrap {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.routeHint {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(57, 255, 20, 0.55);
+}
+
 .prompt {
   position: relative;
   z-index: 1;

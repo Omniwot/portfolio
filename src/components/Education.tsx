@@ -1,4 +1,5 @@
 import { credentials, education } from "@/data/site";
+import CmdPrompt from "./CmdPrompt";
 import Reveal from "./Reveal";
 import styles from "./Section.module.css";
 
@@ -11,10 +12,17 @@ export default function Education() {
     >
       <div className={styles.inner}>
         <Reveal>
+          <CmdPrompt size="sm" caret={false}>
+            cat education.md | less
+          </CmdPrompt>
           <p className={styles.kicker}>// background</p>
           <h2 id="education-title" className={styles.title}>
             Education
           </h2>
+          <p className={styles.cmdAside} aria-hidden="true">
+            <span className={styles.cmdAsideText}>{">"} clear && history</span>
+            <span className={styles.cmdAsideText}>{">"} kubectl get pods -n rag</span>
+          </p>
         </Reveal>
         <ul className={styles.eduList}>
           {education.map((ed) => (

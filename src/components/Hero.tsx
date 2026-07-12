@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import MatrixRain from "./MatrixRain";
+import CmdPrompt from "./CmdPrompt";
 import { homeLinks, site } from "@/data/site";
 import styles from "./Hero.module.css";
 
@@ -9,12 +10,14 @@ export default function Hero() {
       <MatrixRain />
       <div className={styles.wash} aria-hidden="true" />
       <div className={styles.inner}>
-        <p className={styles.prompt} aria-hidden="true">
-          {">"} boot --identity
-        </p>
+        <CmdPrompt size="md">boot --identity</CmdPrompt>
         <p className={styles.brand}>{site.brand}</p>
         <h1 className={styles.headline}>{site.headline}</h1>
         <p className={styles.sub}>{site.subline}</p>
+        <p className={styles.decoy} aria-hidden="true">
+          <span className={styles.decoyCmd}>{">"} whoami</span>
+          <span className={styles.decoyOut}>forward-deployed · agentic · RAG</span>
+        </p>
         <div className={styles.actions}>
           <Link className={styles.primary} to="/contact">
             Contact
@@ -33,6 +36,10 @@ export default function Hero() {
             </li>
           ))}
         </ul>
+        <p className={styles.decoyRow} aria-hidden="true">
+          <span className={styles.decoyCmd}>{">"} load_matrix --fast</span>
+          <span className={styles.decoyCmd}>{">"} route_swap</span>
+        </p>
       </div>
     </section>
   );

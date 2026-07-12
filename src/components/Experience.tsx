@@ -1,4 +1,5 @@
 import { experience } from "@/data/site";
+import CmdPrompt from "./CmdPrompt";
 import Reveal from "./Reveal";
 import styles from "./Section.module.css";
 
@@ -7,6 +8,9 @@ export default function Experience() {
     <section id="work" className={styles.section} aria-labelledby="work-title">
       <div className={styles.inner}>
         <Reveal>
+          <CmdPrompt size="sm" caret={false}>
+            cd ./work && history
+          </CmdPrompt>
           <p className={styles.kicker}>// experience</p>
           <h2 id="work-title" className={styles.title}>
             Work
@@ -14,6 +18,10 @@ export default function Experience() {
           <p className={styles.lede}>
             Roles spanning ML/RAG research, full-stack product work, and cloud
             data platforms.
+          </p>
+          <p className={styles.cmdAside} aria-hidden="true">
+            <span className={styles.cmdAsideText}>{">"} ssh work@theorem</span>
+            <span className={styles.cmdAsideText}>{">"} git log --oneline -n 7</span>
           </p>
         </Reveal>
         <ol className={styles.timeline}>

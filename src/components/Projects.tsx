@@ -1,4 +1,5 @@
 import { projects } from "@/data/site";
+import CmdPrompt from "./CmdPrompt";
 import Reveal from "./Reveal";
 import styles from "./Section.module.css";
 
@@ -11,12 +12,19 @@ export default function Projects() {
     >
       <div className={styles.inner}>
         <Reveal>
+          <CmdPrompt size="sm" caret={false}>
+            open projects --selected
+          </CmdPrompt>
           <p className={styles.kicker}>// selected</p>
           <h2 id="projects-title" className={styles.title}>
             Projects
           </h2>
           <p className={styles.lede}>
             A curated set of RAG, agents, and data platform work.
+          </p>
+          <p className={styles.cmdAside} aria-hidden="true">
+            <span className={styles.cmdAsideText}>{">"} grep -r &apos;agent&apos; .</span>
+            <span className={styles.cmdAsideText}>{">"} docker compose up agents</span>
           </p>
         </Reveal>
         <ul className={styles.projectList}>

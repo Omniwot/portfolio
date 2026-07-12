@@ -6,6 +6,9 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <span className={styles.brand}>{site.brand}</span>
+        <span className={styles.cmd} aria-hidden="true">
+          {">"} logout && clear
+        </span>
         <span className={styles.copy}>
           © {new Date().getFullYear()} {site.name}
         </span>
