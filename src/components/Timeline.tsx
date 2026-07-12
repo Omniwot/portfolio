@@ -55,6 +55,7 @@ export default function Timeline() {
                       {i < timeline.length - 1 ? "---->" : "====*"}
                     </span>
                     <div className={styles.copy}>
+                      <p className={styles.org}>{event.label}</p>
                       <CommandLink
                         command={`log read --at=${slugify(event.label, 20)}`}
                         to="/work"
