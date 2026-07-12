@@ -1,0 +1,322 @@
+.section {
+  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 0.65rem;
+}
+
+.title {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  margin-bottom: 0.75rem;
+}
+
+.lede {
+  max-width: 42ch;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.role {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr);
+  gap: 1.25rem 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.roleTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.company {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.company a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.company a:hover {
+  color: var(--accent);
+}
+
+.dot {
+  margin: 0 0.4rem;
+  opacity: 0.5;
+}
+
+.duration {
+  margin-top: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.points {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+.points li {
+  margin-bottom: 0.45rem;
+}
+
+.points li::marker {
+  color: var(--accent);
+}
+
+.projectList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.projectHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.65rem 1.25rem;
+  margin-bottom: 0.45rem;
+}
+
+.projectName {
+  font-size: 1.15rem;
+}
+
+.projectName a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.projectName a:hover {
+  color: var(--accent);
+}
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags li {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.45rem;
+  border-radius: 3px;
+}
+
+.projectDesc {
+  color: var(--text-muted);
+  max-width: 58ch;
+}
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skillGroup {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.skillTitle {
+  font-size: 1rem;
+  margin-bottom: 0.65rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.skillItems {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.eduList {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.edu {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.eduTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+}
+
+.eduSchool {
+  font-size: 1.15rem;
+}
+
+.eduSchool a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.eduSchool a:hover {
+  color: var(--accent);
+}
+
+.eduDegree {
+  margin-top: 0.35rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.eduDetail {
+  margin-top: 0.55rem;
+  color: var(--text-muted);
+  max-width: 55ch;
+}
+
+.creds {
+  padding-top: 0.5rem;
+}
+
+.credsTitle {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.credList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.credList a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.credList a:hover {
+  color: var(--accent);
+}
+
+.credOrg {
+  margin-left: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.contactLinks {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.primaryLink {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.primaryLink:hover {
+  color: var(--accent);
+}
+
+.socialRow {
+  display: flex;
+  gap: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.socialRow a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.socialRow a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .role {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .skillGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

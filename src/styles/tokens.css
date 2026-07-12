@@ -1,0 +1,119 @@
+:root {
+  --bg: #070b0a;
+  --bg-elevated: #0c1210;
+  --text: #d8ffe0;
+  --text-muted: #7aab88;
+  --accent: #3ddc97;
+  --accent-bright: #39ff14;
+  --accent-dim: rgba(61, 220, 151, 0.12);
+  --border: rgba(61, 220, 151, 0.22);
+  --font-display: "Share Tech Mono", "IBM Plex Mono", ui-monospace, monospace;
+  --font-body: "Share Tech Mono", "IBM Plex Mono", ui-monospace, monospace;
+  --font-mono: "Share Tech Mono", "IBM Plex Mono", ui-monospace, monospace;
+  --space: clamp(1.25rem, 4vw, 3rem);
+  --max: 980px;
+  --header-h: 4.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  background-image:
+    radial-gradient(
+      ellipse 90% 60% at 80% -10%,
+      rgba(61, 220, 151, 0.08),
+      transparent 55%
+    ),
+    linear-gradient(
+      rgba(57, 255, 20, 0.015) 1px,
+      transparent 1px
+    );
+  background-size: auto, 100% 4px;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--accent-bright);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(61, 220, 151, 0.28);
+  color: var(--text);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

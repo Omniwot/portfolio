@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem var(--space) 2.5rem;
+}
+
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.copy {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

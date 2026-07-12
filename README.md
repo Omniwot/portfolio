@@ -1,32 +1,24 @@
-# Dev Portfolio
+# Omniwot portfolio
 
-![Portfolio](/images/portfolio1.gif)
+Professional single-page portfolio for Harshal Abhyankar (Omniwot).
 
-### A clean portfolio template. (Readme will be updated soon)
+## Stack
 
-# Sections
+- Vite + React 19 + TypeScript
+- CSS modules + design tokens
+- Subtle Matrix rain canvas (respects `prefers-reduced-motion`)
 
-- Home
-- Education and Certificates
-- Experience
-- Projects
-- Contact and Resume
+## Develop
 
-# How To Use
+```bash
+npm install
+npm run dev
+```
 
-- Clone this repository (or fork, then clone your fork :) )
-- Run `npm i`
-- Check it out using `npm start`
+## Build
 
-# Technologies used 🛠️
+```bash
+npm run build
+```
 
-- [React](https://reactjs.org/)
-- [graphql](https://graphql.org/)
-- [apollo-boost](https://www.apollographql.com/docs/react/get-started/)
-- [baseui](https://github.com/uber/baseweb)
-- [react-reveal](https://www.react-reveal.com/)
-- [styled-components](https://styled-components.com/)
-
-# References
-
-Based on https://github.com/harikanani/harikanani.github.io
+Output is in `dist/`. Sync that folder to the `omniwot.github.io` repo for GitHub Pages.

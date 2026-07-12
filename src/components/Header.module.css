@@ -1,0 +1,125 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-h);
+  backdrop-filter: blur(14px);
+  background: rgba(7, 11, 10, 0.72);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.scrolled {
+  border-bottom-color: var(--border);
+  background: rgba(7, 11, 10, 0.88);
+}
+
+.inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--space);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.45rem 0.65rem;
+  border-radius: 2px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.link:hover {
+  color: var(--accent-bright);
+}
+
+.active {
+  color: var(--accent-bright);
+  background: var(--accent-dim);
+}
+
+.menuBtn {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+}
+
+.menuBtn span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 760px) {
+  .menuBtn {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    z-index: 60;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem var(--space);
+    gap: 0.35rem;
+    background: #070b0a;
+    background-image: linear-gradient(
+      rgba(57, 255, 20, 0.03) 50%,
+      transparent 50%
+    );
+    background-size: 100% 3px;
+    border-left: 1px solid var(--border);
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+  }
+
+  .navOpen {
+    transform: translateX(0);
+  }
+
+  .link {
+    font-size: 1rem;
+    padding: 0.9rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+}

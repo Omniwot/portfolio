@@ -1,0 +1,21 @@
+.shell {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.shellIn {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    pointer-events: auto;
+  }
+}
