@@ -4,29 +4,54 @@
 }
 
 .page {
-  transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+  transition: none;
 }
 
 .hidden {
   opacity: 0;
   pointer-events: none;
-  filter: blur(1px);
+  visibility: hidden;
 }
 
 .enter {
-  animation: pageIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: pageBoot 0.36s steps(7, end) both;
 }
 
-@keyframes pageIn {
-  from {
+@keyframes pageBoot {
+  0% {
     opacity: 0;
-    transform: translateY(6px);
-    filter: brightness(1.35);
+    filter: brightness(3.2) contrast(1.3);
+    clip-path: inset(0 0 100% 0);
   }
-  to {
+  14% {
     opacity: 1;
-    transform: none;
+    filter: brightness(2.8);
+    clip-path: inset(0 0 86% 0);
+  }
+  28% {
+    opacity: 0.25;
+    filter: brightness(0.35);
+    clip-path: inset(0 0 70% 0);
+  }
+  42% {
+    opacity: 1;
+    filter: brightness(2.2);
+    clip-path: inset(0 0 45% 0);
+  }
+  57% {
+    opacity: 0.7;
+    filter: brightness(1.1);
+    clip-path: inset(0 0 22% 0);
+  }
+  71% {
+    opacity: 1;
+    filter: brightness(1.6);
+    clip-path: inset(0 0 8% 0);
+  }
+  100% {
+    opacity: 1;
     filter: none;
+    clip-path: inset(0 0 0 0);
   }
 }
 
@@ -37,20 +62,28 @@
   display: grid;
   place-items: center;
   background: #070b0a;
-  animation: wipeIn 0.2s ease both;
+  animation: wipeFlash 0.18s steps(3, end) both;
 }
 
 .scan {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(57, 255, 20, 0.12) 48%,
-    transparent 52%
-  );
-  background-size: 100% 220%;
-  animation: scanMove 0.42s linear both;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 2px,
+      rgba(57, 255, 20, 0.03) 2px,
+      rgba(57, 255, 20, 0.03) 4px
+    ),
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(57, 255, 20, 0.22) 48%,
+      transparent 52%
+    );
+  background-size: auto, 100% 220%;
+  animation: scanMove 0.38s linear both;
   pointer-events: none;
 }
 
@@ -67,6 +100,7 @@
   letter-spacing: 0.12em;
   color: #39ff14;
   text-shadow: 0 0 14px rgba(57, 255, 20, 0.55);
+  animation: glyphFlicker 0.4s steps(4, end) both;
 }
 
 .prompt {
@@ -83,23 +117,46 @@
     0 0 28px rgba(57, 255, 20, 0.35);
   text-align: center;
   overflow-wrap: anywhere;
+  animation: glyphFlicker 0.4s steps(4, end) 0.05s both;
 }
 
-@keyframes wipeIn {
-  from {
+@keyframes wipeFlash {
+  0% {
     opacity: 0;
+    filter: brightness(4);
   }
-  to {
+  50% {
     opacity: 1;
+    filter: brightness(1.8);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
   }
 }
 
 @keyframes scanMove {
   from {
-    background-position: 0 -40%;
+    background-position: 0 0, 0 -40%;
   }
   to {
-    background-position: 0 140%;
+    background-position: 0 0, 0 140%;
+  }
+}
+
+@keyframes glyphFlicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.45;
   }
 }
 
@@ -107,13 +164,15 @@
   .page,
   .enter,
   .wipe,
-  .scan {
+  .scan,
+  .glyphs,
+  .prompt {
     animation: none;
     transition: none;
   }
 
   .hidden {
     opacity: 1;
-    filter: none;
+    visibility: visible;
   }
 }

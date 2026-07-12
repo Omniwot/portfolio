@@ -1,24 +1,52 @@
 .reveal {
   opacity: 0;
-  transform: translateY(8px);
-  filter: brightness(1.35);
-  transition:
-    opacity 0.28s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.28s ease;
+  filter: brightness(2.4);
+  clip-path: inset(0 0 100% 0);
 }
 
 .visible {
-  opacity: 1;
-  transform: translateY(0);
-  filter: none;
+  animation: matrixBoot 0.32s steps(6, end) both;
+}
+
+@keyframes matrixBoot {
+  0% {
+    opacity: 0;
+    filter: brightness(3);
+    clip-path: inset(0 0 100% 0);
+  }
+  20% {
+    opacity: 1;
+    filter: brightness(2.6);
+    clip-path: inset(0 0 72% 0);
+  }
+  40% {
+    opacity: 0.35;
+    filter: brightness(0.5);
+    clip-path: inset(0 0 48% 0);
+  }
+  60% {
+    opacity: 1;
+    filter: brightness(1.9);
+    clip-path: inset(0 0 18% 0);
+  }
+  80% {
+    opacity: 0.9;
+    filter: brightness(1.2);
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .visible {
     opacity: 1;
-    transform: none;
     filter: none;
-    transition: none;
+    clip-path: none;
+    animation: none;
   }
 }

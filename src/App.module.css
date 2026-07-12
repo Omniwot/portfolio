@@ -1,21 +1,62 @@
 .shell {
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
 }
 
 .shellIn {
-  opacity: 1;
-  transform: none;
+  animation: crtPower 0.45s steps(8, end) both;
   pointer-events: auto;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .shell {
+@keyframes crtPower {
+  0% {
+    opacity: 0;
+    filter: brightness(4) contrast(1.4);
+    clip-path: inset(48% 0 48% 0);
+  }
+  12% {
     opacity: 1;
-    transform: none;
-    transition: none;
+    filter: brightness(3);
+    clip-path: inset(42% 0 42% 0);
+  }
+  25% {
+    opacity: 0.2;
+    filter: brightness(0.4);
+    clip-path: inset(30% 0 30% 0);
+  }
+  40% {
+    opacity: 1;
+    filter: brightness(2.4);
+    clip-path: inset(12% 0 12% 0);
+  }
+  55% {
+    opacity: 0.6;
+    filter: brightness(1.1);
+    clip-path: inset(4% 0 4% 0);
+  }
+  70% {
+    opacity: 1;
+    filter: brightness(1.7);
+    clip-path: inset(0 0 0 0);
+  }
+  85% {
+    opacity: 0.85;
+    filter: brightness(1.15);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell,
+  .shellIn {
+    opacity: 1;
+    filter: none;
+    clip-path: none;
+    animation: none;
     pointer-events: auto;
   }
 }
