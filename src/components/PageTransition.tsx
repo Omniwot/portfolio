@@ -29,6 +29,11 @@ const ROUTE_META: Record<string, { cmd: string; status: string }> = {
   },
 };
 
+const MS_PER_CHAR = 14;
+const PAUSE_BEFORE_STATUS = 120;
+const STATUS_DWELL = 340;
+const FADE_OUT = 300;
+
 type Props = {
   children: ReactNode;
 };
@@ -64,27 +69,34 @@ export default function PageTransition({ children }: Props) {
     setShowStatus(false);
     setPhase("wipe");
 
+    const typeMs = meta.cmd.length * MS_PER_CHAR;
+    const statusAt = typeMs + PAUSE_BEFORE_STATUS;
+    const enterAt = statusAt + STATUS_DWELL;
+    const idleAt = enterAt + FADE_OUT;
+
     let i = 0;
+    let statusTimer: number | undefined;
     const typeTick = window.setInterval(() => {
       i += 1;
       setTyped(meta.cmd.slice(0, i));
       if (i >= meta.cmd.length) {
         window.clearInterval(typeTick);
-        window.setTimeout(() => setShowStatus(true), 60);
+        statusTimer = window.setTimeout(() => setShowStatus(true), PAUSE_BEFORE_STATUS);
       }
-    }, 10);
+    }, MS_PER_CHAR);
 
-    const enterAt = window.setTimeout(() => setPhase("enter"), 480);
-    const idleAt = window.setTimeout(() => {
+    const enterTimer = window.setTimeout(() => setPhase("enter"), enterAt);
+    const idleTimer = window.setTimeout(() => {
       setPhase("idle");
       setTyped("");
       setShowStatus(false);
-    }, 820);
+    }, idleAt);
 
     return () => {
       window.clearInterval(typeTick);
-      window.clearTimeout(enterAt);
-      window.clearTimeout(idleAt);
+      if (statusTimer) window.clearTimeout(statusTimer);
+      window.clearTimeout(enterTimer);
+      window.clearTimeout(idleTimer);
     };
   }, [location.pathname]);
 

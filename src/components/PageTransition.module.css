@@ -39,7 +39,7 @@
     transparent 52%
   );
   background-size: 100% 220%;
-  animation: scanMove 0.45s linear both;
+  animation: scanMove 0.55s linear both;
   pointer-events: none;
 }
 
