@@ -56,11 +56,11 @@ export default function Timeline() {
                     </span>
                     <div className={styles.copy}>
                       <p className={styles.org}>
-                        <span className={styles.location}>{event.location}</span>
+                        <span>{event.label}</span>
                         <span className={styles.orgSep} aria-hidden="true">
                           ·
                         </span>
-                        <span>{event.label}</span>
+                        <span className={styles.location}>{event.location}</span>
                       </p>
                       <CommandLink
                         command={`log read --at=${slugify(event.label, 20)}`}

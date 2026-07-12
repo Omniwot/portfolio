@@ -40,11 +40,11 @@ export default function Experience() {
                   <article className={styles.role}>
                     <div className={styles.roleMeta}>
                       <p className={styles.org}>
-                        <span className={styles.orgLocation}>{role.location}</span>
+                        <span>{role.company}</span>
                         <span className={styles.orgSep} aria-hidden="true">
                           ·
                         </span>
-                        <span>{role.company}</span>
+                        <span className={styles.orgLocation}>{role.location}</span>
                       </p>
                       {role.url ? (
                         <CommandLink
