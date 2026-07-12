@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--header-h) - 12rem);
+  min-height: calc(100dvh - var(--header-h) - 10rem);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -16,8 +16,8 @@
     linear-gradient(
       105deg,
       rgba(7, 11, 10, 0.94) 0%,
-      rgba(7, 11, 10, 0.7) 55%,
-      rgba(7, 11, 10, 0.45) 100%
+      rgba(7, 11, 10, 0.75) 55%,
+      rgba(7, 11, 10, 0.5) 100%
     ),
     radial-gradient(
       ellipse 60% 50% at 70% 40%,
@@ -32,13 +32,13 @@
   max-width: var(--max);
   width: 100%;
   margin: 0 auto;
-  padding: 2.5rem var(--space) 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--space) clamp(1.5rem, 4vw, 2rem);
 }
 
 .prompt {
   margin: 0 0 0.75rem;
   color: var(--accent);
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
   letter-spacing: 0.08em;
   opacity: 0.85;
   animation: rise 0.7s ease both;
@@ -46,36 +46,37 @@
 
 .brand {
   margin: 0 0 0.85rem;
-  font-size: clamp(2.8rem, 10vw, 5.25rem);
-  line-height: 1;
-  letter-spacing: 0.08em;
+  font-size: clamp(2.25rem, 12vw, 5.25rem);
+  line-height: 1.05;
+  letter-spacing: clamp(0.04em, 1.5vw, 0.08em);
   color: var(--accent-bright);
   text-shadow: 0 0 22px rgba(57, 255, 20, 0.35);
   animation: rise 0.8s ease both;
+  overflow-wrap: anywhere;
 }
 
 .headline {
-  max-width: 28ch;
-  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  max-width: 32ch;
+  font-size: clamp(1.05rem, 2.8vw, 1.45rem);
   font-weight: 400;
   color: var(--text);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   animation: rise 0.8s ease 0.06s both;
 }
 
 .sub {
   margin-top: 0.75rem;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.2vw, 1rem);
   color: var(--text-muted);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   animation: rise 0.8s ease 0.12s both;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+  gap: 0.65rem;
+  margin-top: 1.35rem;
   animation: rise 0.8s ease 0.18s both;
 }
 
@@ -84,9 +85,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem 1.2rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.1rem;
   border-radius: 2px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
@@ -118,7 +120,7 @@
 
 .quick {
   list-style: none;
-  margin: 2rem 0 0;
+  margin: 1.75rem 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -129,8 +131,9 @@
 .quickLink {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  padding: 0.75rem 0.8rem;
+  gap: 0.25rem;
+  min-height: 4.25rem;
+  padding: 0.75rem 0.7rem;
   border: 1px solid var(--border);
   background: rgba(7, 11, 10, 0.55);
   text-decoration: none;
@@ -147,12 +150,13 @@
   color: var(--accent-bright);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .quickBlurb {
   color: var(--text-muted);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
 }
 
 @keyframes rise {
@@ -166,13 +170,37 @@
   }
 }
 
+@media (max-width: 900px) {
+  .quick {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 720px) {
   .hero {
     min-height: auto;
+    align-items: flex-start;
   }
 
+  .actions {
+    width: 100%;
+  }
+
+  .primary,
+  .secondary {
+    flex: 1 1 calc(50% - 0.4rem);
+    min-width: 8rem;
+  }
+}
+
+@media (max-width: 420px) {
   .quick {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .primary,
+  .secondary {
+    flex: 1 1 100%;
   }
 }
 

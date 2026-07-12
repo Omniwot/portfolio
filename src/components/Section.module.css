@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(3.5rem, 8vw, 5.5rem) 0;
+  padding: clamp(2rem, 6vw, 5rem) 0;
   border-top: 1px solid var(--border);
 }
 
@@ -18,8 +18,8 @@
 }
 
 .title {
-  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
-  letter-spacing: 0.1em;
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent-bright);
   margin-bottom: 0.75rem;
@@ -28,7 +28,7 @@
 .lede {
   max-width: 42ch;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .timeline {
@@ -37,25 +37,31 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .role {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr);
-  gap: 1.25rem 2rem;
-  padding-bottom: 2rem;
+  gap: 1rem 1.75rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
 }
 
 .roleTitle {
-  font-size: 1.2rem;
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
   margin-bottom: 0.35rem;
+  overflow-wrap: anywhere;
 }
 
 .company {
   color: var(--text-muted);
   font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.location {
+  color: var(--text-muted);
 }
 
 .company a {
@@ -68,7 +74,7 @@
 }
 
 .dot {
-  margin: 0 0.4rem;
+  margin: 0 0.35rem;
   opacity: 0.5;
 }
 
@@ -88,6 +94,7 @@
 
 .points li {
   margin-bottom: 0.45rem;
+  overflow-wrap: break-word;
 }
 
 .points li::marker {
@@ -104,7 +111,7 @@
 }
 
 .project {
-  padding: 1.35rem 0;
+  padding: 1.15rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -113,12 +120,13 @@
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 0.65rem 1.25rem;
+  gap: 0.55rem 1rem;
   margin-bottom: 0.45rem;
 }
 
 .projectName {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  overflow-wrap: anywhere;
 }
 
 .projectName a {
@@ -136,17 +144,17 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .tags li {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-muted);
   border: 1px solid var(--border);
-  padding: 0.2rem 0.45rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 3px;
 }
 
@@ -158,17 +166,16 @@
 .skillGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .skillGroup {
-  padding: 1.25rem 0;
+  padding: 1.1rem 0;
   border-top: 1px solid var(--border);
 }
 
 .skillTitle {
-  font-size: 1rem;
   margin-bottom: 0.65rem;
   color: var(--accent);
   font-family: var(--font-mono);
@@ -180,21 +187,22 @@
 
 .skillItems {
   color: var(--text-muted);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .eduList {
   list-style: none;
-  margin: 0 0 2.5rem;
+  margin: 0 0 2rem;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .edu {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -202,12 +210,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.5rem 1rem;
+  gap: 0.4rem 1rem;
   align-items: baseline;
 }
 
 .eduSchool {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  overflow-wrap: anywhere;
 }
 
 .eduSchool a {
@@ -251,13 +260,21 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
+}
+
+.credList li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.65rem;
 }
 
 .credList a {
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
+  overflow-wrap: anywhere;
 }
 
 .credList a:hover {
@@ -265,26 +282,26 @@
 }
 
 .credOrg {
-  margin-left: 0.65rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--text-muted);
 }
 
 .contactLinks {
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.15rem;
 }
 
 .primaryLink {
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
-  font-weight: 700;
+  font-size: clamp(1.05rem, 3.5vw, 1.65rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: var(--text);
   text-decoration: none;
-  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .primaryLink:hover {
@@ -293,7 +310,8 @@
 
 .socialRow {
   display: flex;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   letter-spacing: 0.04em;
@@ -309,14 +327,37 @@
   color: var(--accent);
 }
 
+@media (max-width: 900px) {
+  .skillGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 800px) {
   .role {
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    gap: 0.75rem;
   }
 
+  .company {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .dot {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
   .skillGrid {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .section {
+    padding: 1.75rem 0 2.5rem;
   }
 }

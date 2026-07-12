@@ -29,10 +29,12 @@ export default function Experience() {
                           {role.company}
                         </a>
                       ) : (
-                        role.company
+                        <span>{role.company}</span>
                       )}
-                      <span className={styles.dot}>·</span>
-                      <span>{role.location}</span>
+                      <span className={styles.dot} aria-hidden="true">
+                        ·
+                      </span>
+                      <span className={styles.location}>{role.location}</span>
                     </p>
                     <p className={styles.duration}>{role.duration}</p>
                   </div>
